@@ -1,0 +1,20 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/js/home.js": "/js/home.js",
+    "/js/Categories.js": "/js/Categories.js",
+    "/js/blogAllData.js": "/js/blogAllData.js",
+    "/js/ProductCreate.js": "/js/ProductCreate.js",
+    "/js/ProductEdit.js": "/js/ProductEdit.js",
+    "/js/Product.js": "/js/Product.js",
+    "/js/OrderCreate.js": "/js/OrderCreate.js",
+    "/js/OrderEdit.js": "/js/OrderEdit.js",
+    "/js/Order.js": "/js/Order.js",
+    "/js/Slides.js": "/js/Slides.js",
+    "/js/FoodSlideCreate.js": "/js/FoodSlideCreate.js",
+    "/js/FoodSlideEdit.js": "/js/FoodSlideEdit.js",
+    "/js/BlogCreate.js": "/js/BlogCreate.js",
+    "/js/BlogEdit.js": "/js/BlogEdit.js",
+    "/js/Blog.js": "/js/Blog.js",
+    "/js/User.js": "/js/User.js",
+    "/css/app.css": "/css/app.css"
+}
