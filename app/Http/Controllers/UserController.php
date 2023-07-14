@@ -16,7 +16,7 @@ class UserController extends Controller
     {
         try {
             $perPage = $request['perPage'];
-            $data = User::latest()->where('scope', 'user')->paginate($perPage);
+            $data = User::latest()->where('scope', 'user')->where('name', 'Like', '%' . $request['search'] . '%')->paginate($perPage);
             $pages_count = ceil($data->total() / $perPage);
             $labels = [];
             for ($i = 1; $i <= $pages_count; $i++) {
