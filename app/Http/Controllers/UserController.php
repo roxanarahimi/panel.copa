@@ -37,11 +37,11 @@ class UserController extends Controller
 
     }
 
-    public function indexAdmins()
+    public function indexAdmins(Request $request)
     {
         try {
             $perPage = 4;
-            $data = User::latest()->where('scope', 'admin')->paginate($perPage);
+            $data = User::latest()->where('scope', 'admin')->where('name', 'Like', '%' . $request['search'] . '%')->paginate($perPage);
             $pages_count = ceil($data->total() / $perPage);
             $labels = [];
             for ($i = 1; $i <= $pages_count; $i++) {
