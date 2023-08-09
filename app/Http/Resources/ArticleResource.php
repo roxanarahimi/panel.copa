@@ -22,6 +22,7 @@ class ArticleResource extends JsonResource
             "title" => $this->title,
             "stock" => $this->stock,
             "active" => (boolean)$this->active,
+            "ingredients" => $this->ingredients,
             "text" => $this->text,
 
             "product" => new ProductResource($this->product),
@@ -31,12 +32,12 @@ class ArticleResource extends JsonResource
                 'title' => $this->category->title,
                 'active' => $this->category->active,
             ],
-            "tag" => [
-                'id' => $this->tag->id,
-                'title' => $this->tag->title,
-                'active' => $this->tag->active
-            ],
-            "article_tag_id" => $this->article_tag_id,
+//            "tag" => [
+//                'id' => $this->tag->id,
+//                'title' => $this->tag->title,
+//                'active' => $this->tag->active
+//            ],
+//            "article_tag_id" => $this->article_tag_id,
             "views" => $this->views,
             "likes" => $this->likes,
             "dislikes" => $this->dislikes,

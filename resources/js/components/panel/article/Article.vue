@@ -1,6 +1,6 @@
 <template>
     <transition name = "route" mode = "out-in" appear>
-        <section class = "" v-if = "data">
+        <section class = "" v-if = "data.id">
             <div class = "index_image">
              <img class = "img-fluid mb-2" :src = "data.image" width="350" alt = "">
                 <div class = "label">
@@ -12,6 +12,7 @@
             </div>
 
                 <h3 class = "mb-2 fw-bold d-inline-block ">{{data.title}}</h3>
+                <h3 class = "mb-2 fw-bold d-inline-block ">{{data.title_en}}</h3>
 
             <router-link :to = "'/panel/edit/article/'+data.id" class = "text-dark">
                 <span title = "ویرایش دستور پخت" class = "mx-3 p-2 d-inline-block align-middle bg-dark text-light rounded-circle">
@@ -26,25 +27,29 @@
                         <div class = "card-body p-md-5">
                             <h3  class="mb-5">محصول:</h3>
                             <h3 v-if="data.product">{{ data.product.title }}</h3>
-                            <img v-if="data.product" class = "img-fluid mb-2" :src = "data.product.image" width="350" alt = "">
                             <h3 v-if="data.product">{{ data.product.title_en }}</h3>
-                            <h4 v-if="data.product">{{ data.product.subTitle }}</h4>
+
+                            <img v-if="data.product" class = "img-fluid mb-2" :src = "data.product.image" width="350" alt = "">
                             <h6 v-if="data.product">{{ data.product.flavor }}</h6>
+                            <h6 v-if="data.product">{{ data.product.flavor_en }}</h6>
                         </div>
                     </div>
                 </div>
                 <div class = "col-lg-6 mb-3">
                     <div class = "card h-100">
                         <div class = "card-body p-md-5">
+                            <h3 class="mb-5">مواد لازم:</h3>
+
+                            <div id = "text" style="font-size: 18px;white-space: pre-line; text-align: right !important" class = "mb-5">{{ data.ingredients}}</div>
                             <h3 class="mb-5">دستور پخت:</h3>
 
-                            <div id = "text" style="font-size: 18px;white-space: pre-line; text-align: right !important" class = "mb-5"></div>
+                            <div id = "text" style="font-size: 18px;white-space: pre-line; text-align: right !important" class = "mb-5">{{ data.text}}</div>
 <!--                            <div>-->
 <!--                                <span v-for = "tag in tags" :key = "tag" :title = "tag.uri" class = "btn btn-sm btn-outline-dark m-1"> {{ tag.label }} </span>-->
 <!--                            </div>-->
 
-                          <b class="">دستور پخت پیشنهادی:</b>
-                          <a class="mx-2" :href="'/panel/article/'+data.tag?.id">{{ data.tag?.title}}</a>
+<!--                          <b class="">دستور پخت پیشنهادی:</b>-->
+<!--                          <a class="mx-2" :href="'/panel/article/'+data.tag?.id">{{ data.tag?.title}}</a>-->
                         </div>
                     </div>
                 </div>

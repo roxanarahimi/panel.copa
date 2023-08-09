@@ -2,9 +2,6 @@ import {createRouter, createWebHistory} from 'vue-router'
 
 import Login from "./components/panel/admin/Login";
 
-import ArticleCreate from "./components/panel/article/ArticleCreate";
-import ArticleEdit from "./components/panel/article/ArticleEdit";
-import Article from "./components/panel/article/Article";
 import UserEdit from "./components/panel/user/UserEdit";
 import SlideCreate from "./components/panel/slide/SlideCreate";
 import SlideEdit from "./components/panel/slide/SlideEdit";
@@ -12,20 +9,10 @@ import SlideEdit from "./components/panel/slide/SlideEdit";
 import Profile from "./components/panel/admin/Profile";
 import Error404 from "./components/panel/error/Error404";
 
-import CourseCreate from "./components/panel/course/CourseCreate";
-import CourseEdit from "./components/panel/course/CourseEdit";
-import Course from "./components/panel/course/Course";
-
-
 const routes = [
     //panel
 
     {
-        // {
-        //     path: "/panel/test",
-        //     component: () => import(/* webpackChunkName: "test" */ '../js/components/panel/product/ProductsT'),
-        //     params: true
-        // },
         path: "/panel",
         // name: "Home",
         component: () => import(/* webpackChunkName: "home" */ '../js/components/panel/Home'),
@@ -99,7 +86,7 @@ const routes = [
 
     {
         path: "/panel/articles",
-        component: () => import(/* webpackChunkName: "ArticleAllData" */ './components/panel/allData'),
+        component: () => import(/* webpackChunkName: "articleAllData" */ './components/panel/allData'),
         name: 'articleAllData',
         params: true,
         props: true
@@ -108,19 +95,19 @@ const routes = [
     {
         path: "/panel/new/article",
         name: "ArticleCreate",
-        component: ArticleCreate,
+        component: () => import(/* webpackChunkName: "ArticleCreate" */ './components/panel/article/ArticleCreate'),
         params: true
     },
     {
         path: "/panel/edit/article/:id",
         name: "ArticleEdit",
-        component: ArticleEdit,
+        component: () => import(/* webpackChunkName: "ArticleEdit" */ './components/panel/article/ArticleEdit'),
         params: true
     },
     {
         path: "/panel/article/:id",
         name: "Article",
-        component: Article,
+        component: () => import(/* webpackChunkName: "Article" */ './components/panel/article/Article'),
     },
 
 

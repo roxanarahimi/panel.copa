@@ -4,7 +4,7 @@
             <div class="row " v-if="data.id" >
                 <div class="col-12 ">
                     <div class="row px-3 ">
-                        <div class="col-12 mb-3 " :style="{ backgroundImage: 'linear-gradient(to right,'+data.color+',white, transparent)'  }">
+                        <div class="col-12 mb-3 ">
                             <div class="d-inline-block mt-5"  >
                                 <div class="ind">
                                     <img class="img-fluid mb-2" :src="data.image" width="350" alt="">
@@ -27,56 +27,20 @@
                     </div>
                 </div>
                 <div class="row">
-<!--                    <p class="col-sm-4 col-md-3 col-xxl-2 mb-5" style="font-size: 14px">برای عوض کردن ترتیب تصاویر،-->
-<!--                        در این لیست-->
-<!--                        drag & drop کنید</p>-->
+
                 </div>
-<!--                <div class="col-sm-4 col-md-3 col-xxl-2 mb-5">-->
-<!--                    <div class="card h-100">-->
-<!--                        <div class="card-body">-->
-<!--                            <draggable ghost-class="moving-card" :animation="500" v-model="data.images"-->
-<!--                                       @start="drag=true" @end="drag=false"-->
-<!--                                       @drop="updateOrder" item-key="item" id=""-->
-<!--                                       class="row px-4 justify-content-center">-->
-<!--                                <template #item="{element}">-->
-<!--                                    <div class="text-center d-block mb-2" style="width: 140px">-->
-<!--                                        <div class="border rounded p-1 " style="cursor: pointer">-->
-<!--                                            <img class="img-fluid" :src="element">-->
-<!--                                        </div>-->
-<!--                                        <input type="hidden" name="order" :value="element">-->
-<!--                                    </div>-->
-<!--                                </template>-->
-<!--                            </draggable>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-sm-8 col-md-9 col-xxl-4 mb-5">-->
-<!--                    <div class="card h-100">-->
-<!--                        <div class="card-body justify-content-center">-->
-<!--                            &lt;!&ndash;                                        <div class="row">&ndash;&gt;-->
-<!--                            &lt;!&ndash;                                            <div v-for="(image, index) in data.images" :key="index"  v-if="data.images" class="col-4 d-flex mb-3 p-2">&ndash;&gt;-->
-<!--                            &lt;!&ndash;                                                <div class="border rounded p-1">&ndash;&gt;-->
-<!--                            &lt;!&ndash;                                                    <img class="img-fluid" :src="image">&ndash;&gt;-->
-<!--                            &lt;!&ndash;                                                </div>&ndash;&gt;-->
-<!--                            &lt;!&ndash;                                            </div>&ndash;&gt;-->
-<!--                            &lt;!&ndash;                                        </div>&ndash;&gt;-->
-<!--                            <images v-if="data.images" :images="data.images" class="w-100  mx-auto"-->
-<!--                                    style="max-width: 600px"/>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
+
                 <div class="col-xxl-12 mb-5 ">
                     <div class="card h-100">
                         <div class="card-body p-md-5 ">
-                            <div class="d-md-flex justify-content-md-between flex-row-reverse">
+                            <div class="d-md-flex justify-content-md-between ">
                                 <p>{{ data.title_en }}</p>
-                                <p>{{ data.subTitle }}</p>
+<!--                                <p>{{ data.subTitle }}</p>-->
                                 <p>{{ data.flavor }}</p>
-                                <p>{{ data.tag1 }}</p>
-                                <p>{{ data.tag2 }}</p>
+                                <p>{{ data.flavor_en }}</p>
                             </div>
-                          <div class="">
-                                <p>لینک خرید: {{ data.link }}</p>
+                          <div class="" v-if="data.link">
+                                <a target="_blank" :href="data.link">لینک خرید</a>
                             </div>
                         </div>
                     </div>
@@ -85,22 +49,6 @@
                     <div class="card h-100">
                         <div class="card-body p-md-5 ">
                             <div class="row">
-<!--                                <div class="col-lg-12 table-responsive">-->
-<!--                                    <h5>سایز بندی</h5>-->
-<!--                                    <table v-if="data.sizes">-->
-<!--                                        <tbody>-->
-<!--                                        <tr v-for="item in data.sizes" :key="item.id">-->
-<!--                                            <th>{{ item.size }}:</th>-->
-<!--                                            <td>{{ item.dimensions }}</td>-->
-<!--                                            <td>{{ item.color_name }}-->
-<!--                                                <span class="me-2 color-span border d-inline-block"-->
-<!--                                                      :style="'background-color:'+ item.color_code+';'"></span>-->
-<!--                                            </td>-->
-<!--                                            <td> موجودی:{{ item.stock }}عدد</td>-->
-<!--                                        </tr>-->
-<!--                                        </tbody>-->
-<!--                                    </table>-->
-<!--                                </div>-->
                                 <div class="col-lg-12">
                                     <h5  class="mb-5">ارزش غذایی</h5>
                                     <table v-if="data.features">

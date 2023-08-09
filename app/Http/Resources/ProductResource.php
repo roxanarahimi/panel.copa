@@ -30,9 +30,10 @@ class ProductResource extends JsonResource
             "title_en" => $this->title_en,
             "subTitle" => $this->subTitle,
             "flavor" => $this->flavor,
-            "tag1" => $this->tag1,
-            "tag2" => $this->tag2,
-            "color" => $this->color,
+            "flavor_en" => $this->flavor_en,
+//            "tag1" => $this->tag1,
+//            "tag2" => $this->tag2,
+//            "color" => $this->color,
             "link" => $this->link,
 
             "stock" => $this->stock,
@@ -43,7 +44,7 @@ class ProductResource extends JsonResource
                 'title' => $this->category->title,
                 'active' => $this->category->active,
             ],
-            "sizes" => $this->sizes,
+//            "sizes" => $this->sizes,
 
 
             "features" => $this->features,

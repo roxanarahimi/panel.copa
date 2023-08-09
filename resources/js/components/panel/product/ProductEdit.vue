@@ -42,7 +42,7 @@
                                 <!--                                </div>-->
 
                                 <div class="row">
-                                    <div class="col-md-9 col-lg-10 mb-3">
+                                    <div class="col-md-6 mb-3">
                                         <label for="title" class="form-label">عنوان</label>
                                         <input @input="updateData" type="text" :class="{hasError: errors.title}"
                                                class="form-control"
@@ -51,40 +51,39 @@
                                         <p class="form-text error m-0" v-for="e in errors.title">{{ e }}</p>
 
                                     </div>
-
-                                    <div class="col-md-3 col-lg-2 mb-3">
-                                        <label for="color" class="form-label">تم رنگ محصول</label>
-                                        <input @input="updateData" type="text" :class="{hasError: errors.color}"
-                                               class="form-control en"
-                                               id="color" :value="data.color" aria-describedby="colorHelp" required>
-                                        <div id="colorHelp" class="form-text error"></div>
-                                        <p class="form-text error m-0" v-for="e in errors.color">{{ e }}</p>
-                                    </div>
-                                    <div class="col-md-4 col-lg-4 mb-3">
+                                    <div class="col-md-6 mb-3">
                                         <label for="title_en" class="form-label">عنوان انگلیسی</label>
                                         <input @input="updateData" type="text" :class="{hasError: errors.title_en}"
-                                               class="en form-control"
-                                               id="title_en" :value="data.title_en" aria-describedby="title_enHelp"
-                                               required>
+                                               class="form-control"
+                                               id="title_en" :value="data.title_en" aria-describedby="title_enHelp" required>
                                         <div id="title_enHelp" class="form-text error"></div>
                                         <p class="form-text error m-0" v-for="e in errors.title_en">{{ e }}</p>
 
                                     </div>
-                                    <div class="col-md-4 col-lg-4 mb-3">
-                                        <label for="subTitle" class="form-label">زیرنویس انگلیسی</label>
-                                        <input @input="updateData" type="text" :class="{hasError: errors.subTitle}"
-                                               :value="data.subTitle" class="en form-control text-start" id="subTitle"
-                                               required>
-                                        <div id="subTitleHelp" class="form-text error"></div>
-                                        <p class="form-text error m-0" v-for="e in errors.subTitle">{{ e }}</p>
 
-                                    </div>
+<!--                                    <div class="col-md-4 col-lg-4 mb-3">-->
+<!--                                        <label for="subTitle" class="form-label">زیرنویس انگلیسی</label>-->
+<!--                                        <input @input="updateData" type="text" :class="{hasError: errors.subTitle}"-->
+<!--                                               :value="data.subTitle" class="en form-control text-start" id="subTitle"-->
+<!--                                               required>-->
+<!--                                        <div id="subTitleHelp" class="form-text error"></div>-->
+<!--                                        <p class="form-text error m-0" v-for="e in errors.subTitle">{{ e }}</p>-->
+
+<!--                                    </div>-->
                                     <div class="col-md-4 col-lg-4 mb-3">
-                                        <label for="flavor" class="form-label">باطعم انگلیسی</label>
+                                        <label for="flavor" class="form-label">باطعم</label>
                                         <input @input="updateData" type="text" :class="{hasError: errors.flavor}"
                                                :value="data.flavor" class="en form-control text-start" id="flavor">
                                         <div id="flavorHelp" class="form-text error"></div>
                                         <p class="form-text error m-0" v-for="e in errors.flavor">{{ e }}</p>
+
+                                    </div>
+                                    <div class="col-md-4 col-lg-4 mb-3">
+                                        <label for="flavor_en" class="form-label">باطعم انگلیسی</label>
+                                        <input @input="updateData" type="text" :class="{hasError: errors.flavor_en}"
+                                               :value="data.flavor_en" class="en form-control text-start" id="flavor_en">
+                                        <div id="flavor_enHelp" class="form-text error"></div>
+                                        <p class="form-text error m-0" v-for="e in errors.flavor_en">{{ e }}</p>
 
                                     </div>
                                     <div class="col-md-4 col-lg-4 mb-3">
@@ -101,23 +100,23 @@
                                         </select>
                                         <div id="categoryHelp" class="form-text error"></div>
                                     </div>
-                                    <div class="col-md-4 col-lg-4 mb-3">
-                                        <label for="tag1" class="form-label">تگ 1</label>
-                                        <input @input="updateData" type="text" :class="{hasError: errors.tag1}"
-                                               class="form-control"
-                                               id="tag1" :value="data.tag1" aria-describedby="tag1Help">
-                                        <div id="tag1Help" class="form-text error"></div>
-                                        <p class="form-text error m-0" v-for="e in errors.tag1">{{ e }}</p>
+<!--                                    <div class="col-md-4 col-lg-4 mb-3">-->
+<!--                                        <label for="tag1" class="form-label">تگ 1</label>-->
+<!--                                        <input @input="updateData" type="text" :class="{hasError: errors.tag1}"-->
+<!--                                               class="form-control"-->
+<!--                                               id="tag1" :value="data.tag1" aria-describedby="tag1Help">-->
+<!--                                        <div id="tag1Help" class="form-text error"></div>-->
+<!--                                        <p class="form-text error m-0" v-for="e in errors.tag1">{{ e }}</p>-->
 
-                                    </div>
-                                    <div class="col-md-4 col-lg-4 mb-3">
-                                        <label for="tag2" class="form-label">تگ 2</label>
-                                        <input @input="updateData" type="text" :class="{hasError: errors.tag2}"
-                                               :value="data.tag2" class="form-control text-start" id="tag2">
-                                        <div id="tag2Help" class="form-text error"></div>
-                                        <p class="form-text error m-0" v-for="e in errors.tag2">{{ e }}</p>
+<!--                                    </div>-->
+<!--                                    <div class="col-md-4 col-lg-4 mb-3">-->
+<!--                                        <label for="tag2" class="form-label">تگ 2</label>-->
+<!--                                        <input @input="updateData" type="text" :class="{hasError: errors.tag2}"-->
+<!--                                               :value="data.tag2" class="form-control text-start" id="tag2">-->
+<!--                                        <div id="tag2Help" class="form-text error"></div>-->
+<!--                                        <p class="form-text error m-0" v-for="e in errors.tag2">{{ e }}</p>-->
 
-                                    </div>
+<!--                                    </div>-->
                                   <div class="col-md-12 col-lg-12 mb-3">
                                     <label for="link" class="form-label">لینک خرید</label>
                                     <input type="text" :class="{hasError: errors.link}"
@@ -354,19 +353,14 @@ export default {
                         // image: document.getElementById('Image_index_code').value,
                         image: document.getElementById('Image__code').value,
                         title: document.getElementById('title').value,
-                        subTitle: document.getElementById('subTitle').value,
+                        // subTitle: document.getElementById('subTitle').value,
                         title_en: document.getElementById('title_en').value,
                         flavor: document.getElementById('flavor').value,
-                        tag1: document.getElementById('tag1').value,
-                        tag2: document.getElementById('tag2').value,
+                        flavor_en: document.getElementById('flavor_en').value,
                         product_category_id: document.getElementById('category').value,
                         text: document.getElementById('text').value,
-                        color: document.getElementById('color').value,
-                        link: document.getElementById('link').value,
                         features: features,
-                        // sizes: this.sizes,
-                        // off: document.getElementById('off').value,
-                        // price: document.getElementById('price').value,
+                        link: document.getElementById('link').value
                     })
                     .then((response) => {
                         console.log('res', response);
@@ -425,15 +419,11 @@ export default {
         updateData() {
 
             this.data.title = document.getElementById('title').value;
-            this.data.subTitle = document.getElementById('subTitle').value;
             this.data.title_en = document.getElementById('title_en').value;
             this.data.flavor = document.getElementById('flavor').value;
-            this.data.tag1 = document.getElementById('tag1').value;
-            this.data.tag2 = document.getElementById('tag2').value;
+            this.data.flavor_en = document.getElementById('flavor_en').value;
             this.data.text = document.getElementById('text').value;
-            this.data.color = document.getElementById('color').value;
             this.data.product_category_id = document.getElementById('category').value;
-
         },
         watchTextAreas() {
             let txt = document.querySelector("#text");

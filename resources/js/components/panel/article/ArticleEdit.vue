@@ -18,7 +18,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-6 col-xl-8 mb-3">
+                  <div class="col-md-12 col-xl-12 mb-3">
                     <label for="title" class="form-label">عنوان</label>
                     <input type="text" :class="{hasError: errors.title}" class="form-control" id="title"
                            :value="data.title" aria-describedby="titleHelp" required>
@@ -67,18 +67,18 @@
                     </select>
                     <div id="productHelp" class="form-text error"></div>
                   </div>
-                  <div class="col-md-4 col-xl-4 mb-3">
-                    <label for="article_tag_id" class="form-label">دستور پخت پیشنهادی</label>
-                    <select class="form-select" id="article_tag_id" aria-describedby="article_tag_idHelp"
-                            aria-label="article_tag_id" required>
-                      <!--                                          -->
-                      <option :selected="data.tag.id == article.id" v-for="article in articles"
-                              :key="article.id" :value="article.id">
-                        {{ article.title }}
-                      </option>
-                    </select>
-                    <div id="article_tag_idHelp" class="form-text error"></div>
-                  </div>
+<!--                  <div class="col-md-4 col-xl-4 mb-3">-->
+<!--                    <label for="article_tag_id" class="form-label">دستور پخت پیشنهادی</label>-->
+<!--                    <select class="form-select" id="article_tag_id" aria-describedby="article_tag_idHelp"-->
+<!--                            aria-label="article_tag_id" required>-->
+<!--                      &lt;!&ndash;                                          &ndash;&gt;-->
+<!--                      <option :selected="data.tag.id == article.id" v-for="article in articles"-->
+<!--                              :key="article.id" :value="article.id">-->
+<!--                        {{ article.title }}-->
+<!--                      </option>-->
+<!--                    </select>-->
+<!--                    <div id="article_tag_idHelp" class="form-text error"></div>-->
+<!--                  </div>-->
 
                 </div>
                 <!--                                <div class = "row">-->
@@ -109,6 +109,17 @@
                 <!--                                    </div>-->
                 <!--                                </div>-->
                 <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label class="form-label">مواد لازم</label>
+                        <!--                                       <div id="editor"></div>-->
+
+                        <!--                                        <editor mode = "new" />-->
+                        <textarea @input="watchTextAreas" :class="{hasError: errors.ingredients}"
+                                  aria-describedby="ingredientsHelp" class="form-control text-start"
+                                  id="ingredients">{{ data.ingredients }}</textarea>
+                        <div id="ingredientsHelp" class="form-text error"></div>
+                        <p class="form-text error m-0" v-for="e in errors.ingredients">{{ e }}</p>
+                    </div>
                   <div class="col-md-12 mb-3">
                     <label class="form-label">دستور پخت</label>
                     <textarea @input="watchTextAreas" :class="{hasError: errors.text}" aria-describedby="textHelp"
@@ -238,12 +249,13 @@ export default {
 
         await axios.post('/api/panel/article/' + this.$route.params.id,
             {
-              image: document.getElementById('Image__code').value,
-              title: document.getElementById('title').value,
-              article_category_id: document.getElementById('category').value,
-              text: document.getElementById('text').value,
-              product_id: document.getElementById('product_id').value,
-              article_tag_id: document.getElementById('article_tag_id').value,
+                image: document.getElementById('Image__code').value,
+                title: document.getElementById('title').value,
+                article_category_id: document.getElementById('category').value,
+                ingredients: document.getElementById('ingredients').value,
+                text: document.getElementById('text').value,
+                product_id: document.getElementById('product_id').value,
+                // article_tag_id: document.getElementById('article_tag_id').value,
 
               // image2: document.getElementById('Image_product_code').value,
               // text2:  document.getElementById('text2').value,
