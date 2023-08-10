@@ -26,5 +26,9 @@ class Product extends Model
     {
         return $this->belongsToMany(Article::class, 'id','product_id');
     }
+    public function relatedProducts()
+    {
+        return $this->hasMany(RelatedProduct::class, 'product_id', 'id');
+    }
 }
 

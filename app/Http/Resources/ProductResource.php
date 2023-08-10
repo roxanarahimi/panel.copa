@@ -14,13 +14,15 @@ class ProductResource extends JsonResource
      */
     public function toArray($request)
     {
-//        $dots = strlen($this->text)>20 ? '...' : '';
-        $images= [];
-//        if ($this->images){
-//            $images = explode(',',$this->images);
-//        }
+
+        $relatedProducts =[] ;
+        foreach ($this->relatedProducts as $item){
+            $item->relatedProductt->value = $item->relatedProductt->id;
+            $relatedProducts[] = $item->relatedProductt;
+        }
         return [
             "id" => (string)$this->id,
+            "value" => (string)$this->id,
 //            "image" => $this->images[0],
 //            "images" => $images,
             "product_category_id" => $this->product_category_id,
@@ -44,6 +46,8 @@ class ProductResource extends JsonResource
                 'title' => $this->category->title,
                 'active' => $this->category->active,
             ],
+            "related_products" => $relatedProducts,
+
 //            "sizes" => $this->sizes,
 
 
@@ -58,8 +62,6 @@ class ProductResource extends JsonResource
 //            "dislikes" => $this->dislikes,
             "created_at" => date('Y-m-d', strtotime($this->created_at)),
             "updated_at" => date('Y-m-d', strtotime($this->updated_at)),
-
-
         ];
     }
 }

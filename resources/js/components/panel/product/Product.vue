@@ -1,11 +1,11 @@
 <template>
     <transition name="route" mode="out-in" appear>
         <section class="" style="text-align: justify">
-            <div class="row " v-if="data.id" >
+            <div class="row " v-if="data.id">
                 <div class="col-12 ">
                     <div class="row px-3 ">
                         <div class="col-12 mb-3 ">
-                            <div class="d-inline-block mt-5"  >
+                            <div class="d-inline-block mt-5">
                                 <div class="ind">
                                     <img class="img-fluid mb-2" :src="data.image" width="350" alt="">
                                     <div class="label">
@@ -35,11 +35,11 @@
                         <div class="card-body p-md-5 ">
                             <div class="d-md-flex justify-content-md-between ">
                                 <p>{{ data.title_en }}</p>
-<!--                                <p>{{ data.subTitle }}</p>-->
+                                <!--                                <p>{{ data.subTitle }}</p>-->
                                 <p>{{ data.flavor }}</p>
                                 <p>{{ data.flavor_en }}</p>
                             </div>
-                          <div class="" v-if="data.link">
+                            <div class="" v-if="data.link">
                                 <a target="_blank" :href="data.link">لینک خرید</a>
                             </div>
                         </div>
@@ -50,7 +50,7 @@
                         <div class="card-body p-md-5 ">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <h5  class="mb-5">ارزش غذایی</h5>
+                                    <h5 class="mb-5">ارزش غذایی</h5>
                                     <table v-if="data.features">
                                         <tbody>
                                         <tr v-for="item in features" :key="item.id">
@@ -72,9 +72,19 @@
                         <div class="card-body p-md-5">
                             <h5 class="mb-5">ویژگی</h5>
 
-                            <div id="text"  style="font-size: 18px;white-space: pre-line; text-align: right !important"  class="mb-5" >
+                            <div id="text" style="font-size: 18px;white-space: pre-line; text-align: right !important"
+                                 class="mb-5">
                                 {{ data.text }}
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-12 mb-5 ">
+                    <div class="card h-100">
+                        <div class="card-body p-md-5 ">
+                            <h5 class="mb-5">محصولات مرتبط</h5>
+
+                            <button v-for="item in data.related_products" :key="item.id" class="m-2 btn btn-sm btn-primary">{{ item.title}}</button>
                         </div>
                     </div>
                 </div>

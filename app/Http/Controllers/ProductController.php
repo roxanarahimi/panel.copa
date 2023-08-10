@@ -6,6 +6,7 @@ use App\Http\Resources\ProductResource;
 use App\Models\Article;
 use App\Models\Product;
 use App\Models\ProductSize;
+use App\Models\RelatedProduct;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Mockery\Exception;
@@ -20,7 +21,7 @@ class ProductController extends Controller
     {
         try {
             $perPage = $request['perPage'];
-            $data = Product::latest()->where('title', 'Like', '%' . $request['search'] . '%')->paginate($perPage);
+            $data = Product::orderByDesc('id')->where('title', 'Like', '%' . $request['search'] . '%')->paginate($perPage);
             $pages_count = ceil($data->total()/$perPage);
             $labels = [];
             for ($i=1; $i <= $pages_count; $i++){
@@ -33,11 +34,9 @@ class ProductController extends Controller
                 "labels"=> $labels,
                 "title"=> 'محصولات',
                 "tooltip_new"=> 'ثبت محصول جدید',
-
             ], 200);
         } catch (\Exception $exception) {
             return response($exception);
-
         }
     }
 
@@ -217,13 +216,20 @@ class ProductController extends Controller
             return response()->json($validator->messages(), 422);
         }
         try {
-            $product = Product::create($request->except('image'));
+            $product = Product::create($request->except('image','related_products'));
             if ($request['image']) {
                 $name = 'product_' . $product['id'] . '_' . uniqid() . '.png';
                 $image_path = (new ImageController)->uploadImage($request['image'], $name, 'images/products/');
                 $product->update(['image' => '/' . $image_path]);
             }
-
+            if ($request['related_products']){
+                foreach ($request['related_products'] as $item){
+                    RelatedProduct::create([
+                        'product_id' => $product['id'],
+                        'related_product_id' => $item,
+                    ]);
+                }
+            }
             return response(new ProductResource($product), 201);
         } catch (\Exception $exception) {
             return response($exception);
@@ -245,11 +251,25 @@ class ProductController extends Controller
             return response()->json($validator->messages(), 422);
         }
         try {
-            $product->update($request->except('image'));
+            $product->update($request->except('image','related_products'));
             if ($request['image']) {
                 $name = 'product_' . $product['id'] . '_' . uniqid() . '.png';
                 $image_path = (new ImageController)->uploadImage($request['image'], $name, 'images/products/');
                 $product->update(['image' => '/' . $image_path]);
+            }
+
+//            return $request;
+            $relatedZ = RelatedProduct::where('product_id', $request['id'])->get();
+            foreach ($relatedZ as $item){ $item->delete();}
+
+//            return $request['related_products'];
+            if ($request['related_products']){
+                foreach ($request['related_products'] as $item){
+                    RelatedProduct::create([
+                        'product_id' => $product['id'],
+                        'related_product_id' => $item,
+                    ]);
+                }
             }
 
             return response(new ProductResource($product), 200);
@@ -262,6 +282,8 @@ class ProductController extends Controller
     {
 
         try {
+            $relatedZ = RelatedProduct::where('product_id', $product['id'])->get();
+            foreach ($relatedZ as $item){ $item->delete();}
             $product->delete();
             return response('product deleted', 200);
         } catch (\Exception $exception) {

@@ -45,21 +45,6 @@
 
 <script src="{{ asset('js/themes.js') }}"></script>
 
-{{--<script src="https://cdn.ckeditor.com/ckeditor5/33.0.0/classic/ckeditor.js"></script>--}}
-
-{{--<script src="{{ asset('ckeditor5/build/ckeditor.js') }}"></script>--}}
-{{--<script>--}}
-{{--    ClassicEditor.create(--}}
-{{--        document.querySelector('#editor'),--}}
-{{--        {--}}
-{{--            placeholder: 'متن را وارد کنید...',--}}
-{{--        }--}}
-{{--    )--}}
-{{--        .catch(error => {--}}
-{{--            console.log(error);--}}
-{{--        });--}}
-{{--</script>--}}
-
 
 </body>
 </html>

@@ -117,6 +117,20 @@
 <!--                                        <p class="form-text error m-0" v-for="e in errors.tag2">{{ e }}</p>-->
 
 <!--                                    </div>-->
+
+                                    <div class="col-md-12 col-lg-12 mb-3">
+                                        <label class="form-label">محصولات مرتبط</label>
+                                        <Multiselect
+                                            v-model="value"
+                                            :mode="'tags'"
+                                            :options="allProducts"
+                                            :object="true"
+                                            label="title"
+                                            :searchable="true"
+                                            :create-option="true"
+                                        />
+
+                                    </div>
                                   <div class="col-md-12 col-lg-12 mb-3">
                                     <label for="link" class="form-label">لینک خرید</label>
                                     <input type="text" :class="{hasError: errors.link}"
@@ -125,23 +139,6 @@
                                     <p class="form-text error m-0" v-for="e in errors.link">{{ e }}</p>
 
                                   </div>
-
-                                    <!--                                    <div class="col-md-4 col-lg-2 mb-3">-->
-                                    <!--                                        <label for="price" class="form-label">قیمت (ریال)</label>-->
-                                    <!--                                        <input type="number" min="1000" :class="{hasError: errors.price}"-->
-                                    <!--                                               class="form-control text-start" id="price" :value="data.price" required>-->
-                                    <!--                                        <div id="priceHelp" class="form-text error"></div>-->
-                                    <!--                                        <p class="form-text error m-0" v-for="e in errors.price">{{ e }}</p>-->
-
-                                    <!--                                    </div>-->
-                                    <!--                                    <div class="col-md-4 col-lg-1 mb-3">-->
-                                    <!--                                        <label for="off" class="form-label">%تخفیف</label>-->
-                                    <!--                                        <input type="number" :class="{hasError: errors.off}"-->
-                                    <!--                                               class="form-control text-start" id="off" :value="data.off">-->
-                                    <!--                                        <div id="offHelp" class="form-text error"></div>-->
-                                    <!--                                        <p class="form-text error m-0" v-for="e in errors.off">{{ e }}</p>-->
-
-                                    <!--                                    </div>-->
                                     <div class="col-md-12 mb-3">
                                         <label class="form-label" for="text">ویژگی</label>
                                         <textarea @input="watchTextAreas" :class="{hasError: errors.text}"
@@ -185,52 +182,6 @@
                                         </div>
 
                                     </div>
-                                    <!--                                    <div class="col-md-12 mb-3" id="sizes">-->
-                                    <!--                                        <div>-->
-                                    <!--                                            <label class="form-label mb-1 align-middle">سایز و رنگ</label>-->
-                                    <!--                                            <span @click="addSize" class="px-3 d-inline-block align-middle"><i-->
-                                    <!--                                                class="bi bi-plus-circle-fill p-0 mt-2 m-0" style="font-size: 15px"></i></span>-->
-                                    <!--                                        </div>-->
-
-                                    <!--                                        <div v-for="(item, index) in sizes" :key="index" id="sizeSection"-->
-                                    <!--                                             class="row sizeElement">-->
-                                    <!--                                            <input type="hidden" name="id" :value="item.id || null">-->
-                                    <!--                                            <div class="col-6 col-md-2 mb-3">-->
-                                    <!--                                                <input type="text" name="size" class="form-control" @input="updateSizes"-->
-                                    <!--                                                       :value="item.size" placeholder="سایز" required>-->
-                                    <!--                                                <div class="form-text error"></div>-->
-                                    <!--                                            </div>-->
-                                    <!--                                            <div class="col-6 col-md-4 mb-3">-->
-                                    <!--                                                <input type="text" name="dimensions" class="form-control"-->
-                                    <!--                                                       @input="updateSizes" :value="item.dimensions" placeholder="ابعاد"-->
-                                    <!--                                                       required>-->
-                                    <!--                                                <div class="form-text error"></div>-->
-                                    <!--                                            </div>-->
-                                    <!--                                            <div class="col-6 col-md-2 mb-3">-->
-                                    <!--                                                <input type="text" name="color_name" class="form-control"-->
-                                    <!--                                                       @input="updateSizes" :value="item.color_name" placeholder="رنگ"-->
-                                    <!--                                                       required>-->
-                                    <!--                                                <div class="form-text error"></div>-->
-                                    <!--                                            </div>-->
-                                    <!--                                            <div class="col-6 col-md-2 mb-3">-->
-                                    <!--                                                <input type="text" name="color_code" class="form-control" dir="ltr"-->
-                                    <!--                                                       @input="updateSizes" :value="item.color_code"-->
-                                    <!--                                                       placeholder="(#fffff) کد رنگ" required>-->
-                                    <!--                                                <div class="form-text error"></div>-->
-                                    <!--                                            </div>-->
-                                    <!--                                            <div class="col-10 col-md-1 mb-3">-->
-                                    <!--                                                <input type="number" name="stock" class="form-control" min="0" dir="ltr"-->
-                                    <!--                                                       @input="updateSizes" :value="item.stock" placeholder="موجودی"-->
-                                    <!--                                                       required>-->
-                                    <!--                                                <div class="form-text error"></div>-->
-                                    <!--                                            </div>-->
-                                    <!--                                            <div class="col-1 mb-3 pt-2">-->
-                                    <!--                                                <span @click="removeSize(index)"><i class="bi bi-x-circle-fill m-0 "-->
-                                    <!--                                                                                    style="font-size: 15px"></i></span>-->
-                                    <!--                                            </div>-->
-                                    <!--                                        </div>-->
-
-                                    <!--                                    </div>-->
 
                                     <div class="col-md-12 mb-3">
                                         <BtnSubmit @click.prevent="updateInfo">
@@ -256,10 +207,11 @@
 import ImageCropper from '../../components/ImageCropper';
 import App from '../App';
 import BtnSubmit from "../../components/BtnSubmit";
+import Multiselect from '@vueform/multiselect'
 
 
 export default {
-    components: {ImageCropper, App, BtnSubmit},
+    components: {ImageCropper, App, BtnSubmit, Multiselect},
     data() {
         return {
             id: this.$route.params.id,
@@ -278,12 +230,15 @@ export default {
             sizes: [{"size": "", "dimensions": "", "color_name": "", "color_code": "", "stock": ""}],
             images: [],
 
+            value: [],
+            allProducts: []
         }
     },
 
     created() {
         this.loadCategories();
         this.loadProduct();
+        this.loadProducts();
     },
 
     methods: {
@@ -309,9 +264,21 @@ export default {
                     this.isDefined = true;
                 })
                 .then(() => {
+                    this.value = this.data.related_products;
+                })
+                .then(() => {
                     this.watchTextAreas();
                 })
                 .catch();
+        },
+        loadProducts() {
+
+            axios.get('/api/panel/product?page=1&perPage=1000&search=')
+                .then((response) => {
+                    this.allProducts = response.data.data;
+                    this.allProducts = this.allProducts.filter((item)=>item.id != this.id);
+                })
+                .catch()
         },
         loadCategories() {
             axios.get('/api/panel/category/product?page=1&perPage=100000')
@@ -348,9 +315,15 @@ export default {
                 } else {
                     features = '[' + features.toString() + ']';
                 }
+                let selectedProducts = [];
+                    this.value.forEach((element)=>{
+                        selectedProducts.push(element.value)
+                    });
+
                 axios.post('/api/panel/product/' + this.$route.params.id,
                     {
                         // image: document.getElementById('Image_index_code').value,
+                        id: this.$route.params.id,
                         image: document.getElementById('Image__code').value,
                         title: document.getElementById('title').value,
                         // subTitle: document.getElementById('subTitle').value,
@@ -360,7 +333,8 @@ export default {
                         product_category_id: document.getElementById('category').value,
                         text: document.getElementById('text').value,
                         features: features,
-                        link: document.getElementById('link').value
+                        link: document.getElementById('link').value,
+                        related_products: selectedProducts,
                     })
                     .then((response) => {
                         console.log('res', response);
@@ -417,7 +391,6 @@ export default {
         },
 
         updateData() {
-
             this.data.title = document.getElementById('title').value;
             this.data.title_en = document.getElementById('title_en').value;
             this.data.flavor = document.getElementById('flavor').value;
@@ -454,10 +427,11 @@ export default {
 
         },
 
-
     }
 }
 </script>
+<style src="@vueform/multiselect/themes/default.css"></style>
+
 <style>
 span i {
     cursor: pointer;
@@ -466,5 +440,16 @@ span i {
 .en {
     direction: ltr !important;
     text-align: left !important;
+}
+
+.multiselect-tags-search{
+    background-color: transparent !important;
+}
+.multiselect-tag{
+    background-color: #0d6efd !important;
+}
+.multiselect.is-active
+{
+    box-shadow: none !important;
 }
 </style>
