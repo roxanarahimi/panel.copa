@@ -73,12 +73,10 @@ class ArticleController extends Controller
                 $name = 'article_' . $data['id'] . '_' . uniqid() . '.jpg';
                 $image_path = (new ImageController)->uploadImage($request['image'], $name, 'images/articles/');
                 $data->update(['image' => '/' . $image_path]);
+                (new ImageController)->resizeImage('images/articles/',$name);
+
             }
-//            if ($request['image2']) {
-//                $name2 = 'article_' . $data['id'] . '_' . uniqid() . '.jpg';
-//                $image_path2 = (new ImageController)->uploadImage($request['image'], $name2, 'images/articles/');
-//                $data->update(['image2' => '/' . $image_path2]);
-//            }
+
 
             return response(new ArticleResource($data), 201);
         } catch (\Exception $exception) {
@@ -109,12 +107,19 @@ class ArticleController extends Controller
                 $name = 'article_' . $article['id'] . '_' . uniqid() . '.jpg';
                 $image_path = (new ImageController)->uploadImage($request['image'], $name, 'images/articles/');
                 $article->update(['image' => '/' . $image_path]);
+
+                if ($article['image']){
+                    $file_to_delete = ltrim($article['image'], $article['image'][0]); //remove '/' from file name start
+                    $file_to_delete_thumb = ltrim(str_replace('.png','_thumb.png',$file_to_delete));
+                    if (file_exists($file_to_delete)){  unlink($file_to_delete);}
+                    if (file_exists($file_to_delete_thumb)){  unlink($file_to_delete_thumb);}
+                }
+                $article->update(['image' => '/' . $image_path]);
+                (new ImageController)->resizeImage('images/articles/',$name);
+
+
             }
-//            if ($request['image2']) {
-//                $name2 = 'article_product_' . $article['id'] . '_' . uniqid() . '.jpg';
-//                $image_path2 = (new ImageController)->uploadImage($request['image2'], $name2, 'images/articles/');
-//                $article->update(['image2' => '/' . $image_path2]);
-//            }
+
             return response(new ArticleResource($article), 200);
         } catch (\Exception $exception) {
             return response($exception);
@@ -126,6 +131,12 @@ class ArticleController extends Controller
     {
         $data = Article::where('id', $id)->first();
         try {
+            if ($data['image']){
+                $file_to_delete = ltrim($data['image'], $data['image'][0]); //remove '/' from file name start
+                $file_to_delete_thumb = ltrim(str_replace('.png','_thumb.png',$file_to_delete));
+                if (file_exists($file_to_delete)){  unlink($file_to_delete);}
+                if (file_exists($file_to_delete_thumb)){  unlink($file_to_delete_thumb);}
+            }
             $data->delete();
             return response('article deleted', 200);
         } catch (\Exception $exception) {

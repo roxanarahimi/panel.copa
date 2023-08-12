@@ -73,6 +73,8 @@ class BlogController extends Controller
                 $name = 'Blog_' . $data['id'] . '_' . uniqid() . '.jpg';
                 $image_path = (new ImageController)->uploadImage($request['image'], $name, 'images/blogs/');
                 $data->update(['image' => '/' . $image_path]);
+                (new ImageController)->resizeImage('images/blogs/',$name);
+
             }
 //            if ($request['image2']) {
 //                $name2 = 'Blog_' . $data['id'] . '_' . uniqid() . '.jpg';
@@ -108,13 +110,20 @@ class BlogController extends Controller
             if ($request['image']) {
                 $name = 'Blog_' . $blog['id'] . '_' . uniqid() . '.jpg';
                 $image_path = (new ImageController)->uploadImage($request['image'], $name, 'images/blogs/');
+
+                if ($blog['image']){
+                    $file_to_delete = ltrim($blog['image'], $blog['image'][0]); //remove '/' from file name start
+                    $file_to_delete_thumb = ltrim(str_replace('.png','_thumb.png',$file_to_delete));
+                    if (file_exists($file_to_delete)){  unlink($file_to_delete);}
+                    if (file_exists($file_to_delete_thumb)){  unlink($file_to_delete_thumb);}
+                }
+
                 $blog->update(['image' => '/' . $image_path]);
+                (new ImageController)->resizeImage('images/blogs/',$name);
+
+
             }
-//            if ($request['image2']) {
-//                $name2 = 'Blog_product_' . $blog['id'] . '_' . uniqid() . '.jpg';
-//                $image_path2 = (new ImageController)->uploadImage($request['image2'], $name2, 'images/blogs/');
-//                $blog->update(['image2' => '/' . $image_path2]);
-//            }
+
             return response(new BlogResource($blog), 200);
         } catch (\Exception $exception) {
             return response($exception);
@@ -126,6 +135,13 @@ class BlogController extends Controller
     {
         $data = Blog::where('id', $id)->first();
         try {
+            if ($data['image']){
+                $file_to_delete = ltrim($data['image'], $data['image'][0]); //remove '/' from file name start
+                $file_to_delete_thumb = ltrim(str_replace('.png','_thumb.png',$file_to_delete));
+                if (file_exists($file_to_delete)){  unlink($file_to_delete);}
+                if (file_exists($file_to_delete_thumb)){  unlink($file_to_delete_thumb);}
+            }
+
             $data->delete();
             return response('Blog deleted', 200);
         } catch (\Exception $exception) {

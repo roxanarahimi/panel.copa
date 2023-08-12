@@ -1,7 +1,7 @@
 <template>
 
 
-    <div v-if="allData.length" class="card">
+    <div v-if="allData" class="card">
         <div class="card-body table-responsive">
             <table class="table">
                 <thead>

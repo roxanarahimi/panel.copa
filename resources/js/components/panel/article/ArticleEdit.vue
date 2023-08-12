@@ -196,9 +196,6 @@ export default {
           .then(() => {
             this.watchTextAreas();
           })
-          .then(() => {
-            this.showProducts();
-          })
           .catch();
     },
     loadCategories() {
@@ -212,7 +209,9 @@ export default {
             this.productCategories = response.data.data;
           })
           .then(() => {
-            this.showProducts();
+            setTimeout(()=>{
+                this.showProducts();
+            },1000)
           })
           .catch();
       axios.get('/api/panel/article?page=1&perPage=100000')

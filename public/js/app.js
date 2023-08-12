@@ -19493,10 +19493,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
       if (files.length) {
         selectedFile.value = files[0];
-      } //console.log('file size:', files[0].size+' bytes');
+      }
 
+      if (files[0].type != 'image/png') {
+        selectedFile.value = null; // document.getElementById("preview_" + _props.name).setAttribute('src', "");
+        // document.getElementById('Image_' + _props.name + '_code').setAttribute('value', "");
+        // destination.value = null;
 
-      if (files[0]) {
+        alert('فرمت باید png باشد');
+      }
+
+      if (files[0], files[0].type == 'image/png') {
         var reader = new FileReader();
 
         reader.onload = function (files) {
@@ -23080,7 +23087,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.sidebar_title[data-v-701896bb] {\n    padding: 0 5px 20px 0;\n}\n.nav-link[data-v-701896bb] {\n    border-radius: 0 !important;\n}\n#sidebar-wrapper[data-v-701896bb] {\n    /*height: 100vh;*/\n    overflow-y: scroll;\n    overflow-x: hidden;\n    direction: ltr;\n    /*margin-top: 3.5rem;*/\n}\n#sidebar[data-v-701896bb] {\n    direction: rtl;\n    min-height: calc(100vh);\n}\ntr:first-child td[data-v-701896bb], tr:last-child td[data-v-701896bb], tr:first-child th[data-v-701896bb], tr:last-child th[data-v-701896bb] {\n    width: 35px !important;\n}\nbody[data-v-701896bb] {\n    background-color: #2c3034 !important;\n    color: white !important;\n}\n\n/*.zoom-enter-from,*/\n/*.zoom-leave-to {*/\n/*    opacity: 0;*/\n/*    transform: scale(0, 0);*/\n/*}*/\n\n/*.zoom-enter-to,*/\n/*.zoom-leave-from {*/\n/*    opacity: 1;*/\n/*    transform: scale(1, 1);*/\n/*}*/\n\n/*.zoom-enter-active {*/\n/*    transition: all 1s ease;*/\n/*    animation-delay: 0.2s;*/\n/*}*/\n\n/*.zoom-leave-active {*/\n/*    transition: all 0.5s ease;*/\n/*    transform: scale(0, 0) !important;*/\n/*    position: absolute;*/\n/*    right: calc(50% - 155px);*/\n/*}*/\n\n/*.zoom-move {*/\n/*    transition: all 1s ease;*/\n/*}*/\n\n\n/*.date_cell {*/\n/*    direction: ltr !important;*/\n/*    text-align: right !important;*/\n/*}*/\n\n/*.text_cell {*/\n/*    white-space: nowrap;*/\n/*    overflow: hidden;*/\n/*    text-overflow: ellipsis;*/\n/*    max-width: 30ch;*/\n/*}*/\n\n/*.active_cell {*/\n/*    width: 60px;*/\n/*    text-align: center;*/\n/*}*/\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.sidebar_title[data-v-701896bb] {\r\n    padding: 0 5px 20px 0;\n}\n.nav-link[data-v-701896bb] {\r\n    border-radius: 0 !important;\n}\n#sidebar-wrapper[data-v-701896bb] {\r\n    /*height: 100vh;*/\r\n    overflow-y: scroll;\r\n    overflow-x: hidden;\r\n    direction: ltr;\r\n    /*margin-top: 3.5rem;*/\n}\n#sidebar[data-v-701896bb] {\r\n    direction: rtl;\r\n    min-height: calc(100vh);\n}\ntr:first-child td[data-v-701896bb], tr:last-child td[data-v-701896bb], tr:first-child th[data-v-701896bb], tr:last-child th[data-v-701896bb] {\r\n    width: 35px !important;\n}\nbody[data-v-701896bb] {\r\n    background-color: #2c3034 !important;\r\n    color: white !important;\n}\r\n\r\n/*.zoom-enter-from,*/\r\n/*.zoom-leave-to {*/\r\n/*    opacity: 0;*/\r\n/*    transform: scale(0, 0);*/\r\n/*}*/\r\n\r\n/*.zoom-enter-to,*/\r\n/*.zoom-leave-from {*/\r\n/*    opacity: 1;*/\r\n/*    transform: scale(1, 1);*/\r\n/*}*/\r\n\r\n/*.zoom-enter-active {*/\r\n/*    transition: all 1s ease;*/\r\n/*    animation-delay: 0.2s;*/\r\n/*}*/\r\n\r\n/*.zoom-leave-active {*/\r\n/*    transition: all 0.5s ease;*/\r\n/*    transform: scale(0, 0) !important;*/\r\n/*    position: absolute;*/\r\n/*    right: calc(50% - 155px);*/\r\n/*}*/\r\n\r\n/*.zoom-move {*/\r\n/*    transition: all 1s ease;*/\r\n/*}*/\r\n\r\n\r\n/*.date_cell {*/\r\n/*    direction: ltr !important;*/\r\n/*    text-align: right !important;*/\r\n/*}*/\r\n\r\n/*.text_cell {*/\r\n/*    white-space: nowrap;*/\r\n/*    overflow: hidden;*/\r\n/*    text-overflow: ellipsis;*/\r\n/*    max-width: 30ch;*/\r\n/*}*/\r\n\r\n/*.active_cell {*/\r\n/*    width: 60px;*/\r\n/*    text-align: center;*/\r\n/*}*/\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

@@ -1159,8 +1159,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   _this.isDefined = true;
                 }).then(function () {
                   _this.watchTextAreas();
-                }).then(function () {
-                  _this.showProducts();
                 })["catch"]();
 
               case 2:
@@ -1180,7 +1178,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       axios.get('/api/panel/category/product?page=1&perPage=100000').then(function (response) {
         _this2.productCategories = response.data.data;
       }).then(function () {
-        _this2.showProducts();
+        setTimeout(function () {
+          _this2.showProducts();
+        }, 1000);
       })["catch"]();
       axios.get('/api/panel/article?page=1&perPage=100000').then(function (response) {
         _this2.articles = response.data.data;

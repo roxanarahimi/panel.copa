@@ -65,9 +65,11 @@ class ArticleCategoryController extends Controller
         try {
             $data = ArticleCategory::create($request->except('image'));
             if ($request['image']) {
-                $name = 'article_' . $data['id'] . '_' . uniqid() . '.png';
+                $name = 'article_category_' . $data['id'] . '_' . uniqid() . '.png';
                 $image_path = (new ImageController)->uploadImage($request['image'], $name, 'images/articles/');
                 $data->update(['image' => '/' . $image_path]);
+                (new ImageController)->resizeImage('images/articles/',$name);
+
             }
 
             return response(new ArticleCategoryResource($data), 201);
@@ -93,9 +95,20 @@ class ArticleCategoryController extends Controller
         try {
             $articleCategory->update($request->except('image'));
             if ($request['image']) {
-                $name = 'article_' . $articleCategory['id'] . '_' . uniqid() . '.png';
+                $name = 'article_category_' . $articleCategory['id'] . '_' . uniqid() . '.png';
                 $image_path = (new ImageController)->uploadImage($request['image'], $name, 'images/articles/');
+
+
+                if ($articleCategory['image']){
+                    $file_to_delete = ltrim($articleCategory['image'], $articleCategory['image'][0]); //remove '/' from file name start
+                    $file_to_delete_thumb = ltrim(str_replace('.png','_thumb.png',$file_to_delete));
+                    if (file_exists($file_to_delete)){  unlink($file_to_delete);}
+                    if (file_exists($file_to_delete_thumb)){  unlink($file_to_delete_thumb);}
+                }
+
                 $articleCategory->update(['image' => '/' . $image_path]);
+                (new ImageController)->resizeImage('images/articles/',$name);
+
             }
 
             return response(new ArticleCategoryResource($articleCategory), 200);
@@ -109,6 +122,14 @@ class ArticleCategoryController extends Controller
         try {
             $data = ArticleCategory::where('id',$request['id'])->first();
             $data->articles->each->delete();
+
+            if ($data['image']){
+                $file_to_delete = ltrim($data['image'], $data['image'][0]);
+                $file_to_delete_thumb = str_replace('.png','_thumb.png',$file_to_delete);
+                if (file_exists($file_to_delete)){ unlink($file_to_delete); }
+                if (file_exists($file_to_delete_thumb)){ unlink($file_to_delete_thumb); }
+            }
+
             $data->delete();
             return response("category and it's subsets deleted", 200);
         } catch (\Exception $exception) {
