@@ -14,7 +14,7 @@ class ArticleResource extends JsonResource
      */
     public function toArray($request)
     {
-        $thumb = $this->image ? str_replace('.jpg', '_thumb.jpg', $this->image) : '';
+        $thumb = $this->image ? str_replace('.png','_thumb.png', $this->image) : '';
         return [
             "id" => (string)$this->id,
             "image" => $this->image,

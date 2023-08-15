@@ -14,11 +14,14 @@ class ProductCategoryResource extends JsonResource
      */
     public function toArray($request)
     {
+        $thumb = $this->image ? str_replace('.png','_thumb.png', $this->image) : '';
+
         return [
             "id" => (string)$this->id,
             "title" => $this->title,
             "title_en" => $this->title_en,
             "image" => $this->image,
+            "thumb" => $thumb,
             "active" => (boolean)$this->active,
             "products" => ProductResource::collection($this->products),
             "subsets" => ProductResource::collection($this->products),

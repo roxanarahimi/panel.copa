@@ -16,33 +16,9 @@
                                         <div id="imageHelp" class="form-text error"></div>
                                     </div>
                                 </div>
-                                <!--                                <div class="row">-->
-                                <!--                                    <div class="col-12 mb-3">-->
-                                <!--                                        <label class="form-label">تصاویر</label><br/>-->
-                                <!--                                        <span @click="addImage" class="px-2 d-inline-block align-middle"><i-->
-                                <!--                                            class="bi bi-plus-circle-fill p-0 mt-2 m-0"-->
-                                <!--                                            style="font-size: 15px"></i></span>-->
-                                <!--                                    </div>-->
-                                <!--                                </div>-->
-                                <!--                                <div class="imgSection">-->
-                                <!--                                    <div class="row" v-for="(item, index) in images" :key="index">-->
-                                <!--                                        &lt;!&ndash;                                    <div class="row">&ndash;&gt;-->
-                                <!--                                        <div class="col-auto pt-3">-->
-                                <!--                                            <span @click="removeImage(index)"><i class="bi bi-x-circle-fill m-0 "-->
-                                <!--                                                                                 style="font-size: 15px"></i></span>-->
-                                <!--                                        </div>-->
-                                <!--                                        <div class="col-10">-->
-                                <!--                                            <input type="text" class="d-none" :value="item" :id="'prev_image_'+index">-->
-                                <!--                                            <image-cropper :name="index" caption="" :hasCaption="hasCaption"-->
-                                <!--                                                           :isRequired="imgRequired" :aspect="aspect"/>-->
-                                <!--                                            <div id="imageHelp" class="form-text error"></div>-->
-                                <!--                                        </div>-->
-                                <!--                                    </div>-->
-                                <!--                                </div>-->
-
                                 <div class="row">
 
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-4 mb-3">
                                         <label for="title" class="form-label">عنوان</label>
                                         <input type="text" :class="{hasError: errors.title}" class="form-control"
                                                id="title" aria-describedby="titleHelp" required>
@@ -50,7 +26,7 @@
                                         <p class="form-text error m-0" v-for="e in errors.title">{{ e }}</p>
 
                                     </div>
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-4 mb-3">
                                         <label for="title_en" class="form-label">عنوان انگلیسی</label>
                                         <input type="text" :class="{hasError: errors.title_en}" class="en form-control"
                                                id="title_en" aria-describedby="title_enHelp" required>
@@ -58,6 +34,14 @@
                                         <p class="form-text error m-0" v-for="e in errors.title_en">{{ e }}</p>
 
                                     </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="subTitle" class="form-label">زیرنویس</label>
+                                        <input type="text" :class="{hasError: errors.subTitle}" class="form-control"
+                                               id="subTitle" aria-describedby="subTitleHelp" required>
+                                        <div id="subTitleHelp" class="form-text error"></div>
+                                        <p class="form-text error m-0" v-for="e in errors.subTitle">{{ e }}</p>
+                                    </div>
+
                                     <div class="col-md-4 col-lg-4 mb-3">
                                         <label for="flavor" class="form-label">باطعم</label>
                                         <input type="text" :class="{hasError: errors.flavor}"
@@ -253,7 +237,7 @@ export default {
                     // image: document.getElementById('Image_index_code').value,
                     image: document.getElementById('Image__code').value,
                     title: document.getElementById('title').value,
-                    // subTitle: document.getElementById('subTitle').value,
+                    subTitle: document.getElementById('subTitle').value,
                     title_en: document.getElementById('title_en').value,
                     flavor: document.getElementById('flavor').value,
                     flavor_en: document.getElementById('flavor_en').value,

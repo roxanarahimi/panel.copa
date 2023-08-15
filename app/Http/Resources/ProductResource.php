@@ -21,12 +21,13 @@ class ProductResource extends JsonResource
                 $relatedProducts[] = $item->relatedProductt;
             }
         }
+        $thumb = $this->image ? str_replace('.png','_thumb.png', $this->image) : '';
         return [
             "id" => (string)$this->id,
             "value" => (string)$this->id,
             "product_category_id" => $this->product_category_id,
             "image" => $this->image,
-            "thumb" => str_replace('.png','_thumb.png', $this->image),
+            "thumb" => $thumb,
             "title" => $this->title,
             "title_en" => $this->title_en,
             "subTitle" => $this->subTitle,

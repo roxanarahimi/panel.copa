@@ -16,6 +16,7 @@
                                     </div>
                                 </div>
                                 <h3 class="mb-2 fw-bold d-block">{{ data.title }}</h3>
+                                <h4 class="mb-2 fw-bold d-block">{{ data.subTitle }}</h4>
                             </div>
                             <router-link :to="'/panel/edit/product/'+data.id" class="text-dark">
                 <span title="ویرایش محصول"

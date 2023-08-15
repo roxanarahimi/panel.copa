@@ -14,10 +14,12 @@ class ArticleCategoryResource extends JsonResource
      */
     public function toArray($request)
     {
+        $thumb = $this->image ? str_replace('.png','_thumb.png', $this->image) : '';
         return [
             "id" => (string)$this->id,
             "title" => $this->title,
             "image" => $this->image,
+            "thumb" => $thumb,
             "active" => (boolean)$this->active,
             "editor" => ProductResource::collection($this->articles),
             "subsets" => ProductResource::collection($this->articles),

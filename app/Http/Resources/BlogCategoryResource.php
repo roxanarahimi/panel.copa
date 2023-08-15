@@ -14,10 +14,12 @@ class BlogCategoryResource extends JsonResource
      */
     public function toArray($request)
     {
+        $thumb = $this->image ? str_replace('.png','_thumb.png', $this->image) : '';
         return [
             "id" => (string)$this->id,
             "title" => $this->title,
             "image" => $this->image,
+            "thumb" => $thumb,
             "active" => (boolean)$this->active,
             "subsets" => ProductResource::collection($this->blogs),
             "created_at" => date('Y-m-d', strtotime($this->created_at)),

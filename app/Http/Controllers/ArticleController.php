@@ -32,6 +32,18 @@ class ArticleController extends Controller
             return response($exception);
         }
     }
+    public function indexSite(Request $request)
+    {
+        try {
+            $data = Article::orderByDesc('id')->where('title', 'Like', '%' . $request['search'] . '%')->where('active',1)->get();
+
+            return response([
+                "data" => ArticleResource::collection($data),
+            ], 200);
+        } catch (\Exception $exception) {
+            return response($exception);
+        }
+    }
 
     public function latest()
     {

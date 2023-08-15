@@ -112,8 +112,6 @@ Route::controller(App\Http\Controllers\ArticleController::class)->group(function
 });
 Route::controller(App\Http\Controllers\ArticleCategoryController::class)->group(function () {
 
-    Route::get('/category/article', 'indexSite');
-    Route::get('/category/article/{articleCategory}', 'show');
 
     Route::prefix('panel')->group(function () {
         Route::get('/category/article', 'index');
