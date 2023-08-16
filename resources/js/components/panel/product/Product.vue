@@ -46,6 +46,19 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-xxl-12 mb-5 ">
+                    <div class="card h-100">
+                        <div class="card-body p-md-5 ">
+                            <h5 class="mb-5">ترکیبات</h5>
+
+                            <p>{{ data.ingredients}}</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="col-lg-6 mb-5 ">
                     <div class="card h-100">
                         <div class="card-body p-md-5 ">
@@ -80,6 +93,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-xxl-12 mb-5 ">
                     <div class="card h-100">
                         <div class="card-body p-md-5 ">

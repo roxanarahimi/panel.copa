@@ -96,7 +96,13 @@
                                     </div>
 
                                     <div class="col-md-12 mb-3">
-                                        <label class="form-label" for="text">ویژگی</label>
+                                        <label class="form-label" for="ingredients">ترکیبات</label>
+                                        <textarea @input="watchTextAreas" :class="{hasError: errors.ingredients}" aria-describedby="ingredientsHelp" class="form-control text-start" id="ingredients"></textarea>
+                                        <div id="ingredientsHelp" class="form-text error"></div>
+                                        <p class="form-text error m-0" v-for="e in errors.ingredients">{{ e }}</p>
+                                    </div>
+                                    <div class="col-md-12 mb-3">
+                                        <label class="form-label" for="text">متن</label>
                                         <textarea @input="watchTextAreas" :class="{hasError: errors.text}"
                                                   aria-describedby="textHelp" class="form-control text-start"
                                                   id="text"></textarea>
@@ -105,7 +111,7 @@
                                     </div>
                                     <div class="col-md-12 mb-3" id="features">
                                         <div>
-                                            <label class="form-label mb-1 align-middle">ارزش غذایی</label>
+                                            <label class="form-label mb-1 align-middle">ارزش غذایی در 100 گرم</label>
                                             <span @click="addFeature" class="px-3 d-inline-block align-middle"><i
                                                 class="bi bi-plus-circle-fill p-0 mt-2 m-0" style="font-size: 15px"></i></span>
                                         </div>
@@ -241,6 +247,7 @@ export default {
                     title_en: document.getElementById('title_en').value,
                     flavor: document.getElementById('flavor').value,
                     flavor_en: document.getElementById('flavor_en').value,
+                    ingredients: document.getElementById('ingredients').value,
                     product_category_id: document.getElementById('category').value,
                     text: document.getElementById('text').value,
                     features: features,

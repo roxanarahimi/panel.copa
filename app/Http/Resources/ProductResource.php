@@ -33,6 +33,7 @@ class ProductResource extends JsonResource
             "subTitle" => $this->subTitle,
             "flavor" => $this->flavor,
             "flavor_en" => $this->flavor_en,
+            "ingredients" => $this->ingredients,
             "link" => $this->link,
             "stock" => $this->stock,
             "active" => (boolean)$this->active,
