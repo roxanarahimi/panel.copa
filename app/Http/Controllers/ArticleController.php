@@ -82,7 +82,7 @@ class ArticleController extends Controller
         try {
             $data = Article::create($request->except('image'));
             if ($request['image']) {
-                $name = 'article_' . $data['id'] . '_' . uniqid() . '.jpg';
+                $name = 'article_' . $data['id'] . '_' . uniqid() . '.png';
                 $image_path = (new ImageController)->uploadImage($request['image'], $name, 'images/articles/');
                 $data->update(['image' => '/' . $image_path]);
                 (new ImageController)->resizeImage('images/articles/',$name);
@@ -116,7 +116,7 @@ class ArticleController extends Controller
             $article->update($request->except('image'));
 
             if ($request['image']) {
-                $name = 'article_' . $article['id'] . '_' . uniqid() . '.jpg';
+                $name = 'article_' . $article['id'] . '_' . uniqid() . '.png';
                 $image_path = (new ImageController)->uploadImage($request['image'], $name, 'images/articles/');
                 $article->update(['image' => '/' . $image_path]);
 
