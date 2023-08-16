@@ -117,13 +117,13 @@ class ArticleController extends Controller
 
             if ($request['image']) {
                 $name = 'article_' . $article['id'] . '_' . uniqid() . '.png';
+                $image_path = (new ImageController)->uploadImage($request['image'], $name, 'images/articles/');
                 if ($article['image']){
                     $file_to_delete = ltrim($article['image'], $article['image'][0]); //remove '/' from file name start
                     $file_to_delete_thumb = ltrim(str_replace('.png','_thumb.png',$file_to_delete));
                     if (file_exists($file_to_delete)){  unlink($file_to_delete);}
                     if (file_exists($file_to_delete_thumb)){  unlink($file_to_delete_thumb);}
                 }
-                $image_path = (new ImageController)->uploadImage($request['image'], $name, 'images/articles/');
                 $article->update(['image' => '/' . $image_path]);
                 (new ImageController)->resizeImage('images/articles/',$name);
 
