@@ -139,7 +139,7 @@ export default {
       errors: [],
       imgRequired: true,
       hasCaption: false,
-      aspect: 388 / 391,
+      aspect: 31 / 41,
       isPng: true,
       articles: [],
 
