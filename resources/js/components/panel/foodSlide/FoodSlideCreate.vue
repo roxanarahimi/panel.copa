@@ -112,7 +112,7 @@ export default {
       });
       if (emptyFieldsCount === 0) {
         await axios.post('/api/panel/foodSlide', {
-          image: document.getElementById('Image__code').value,
+          // image: document.getElementById('Image__code').value,
           article_id: document.getElementById('article_id').value,
         })
             .then((response) => {
