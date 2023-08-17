@@ -5,7 +5,7 @@
                 <thead>
                 <tr>
                     <th scope = "col"></th>
-                    <th class = "d-none d-md-table-cell" style = "width: 100px" scope = "col">تصویر اسلاید</th>
+<!--                    <th class = "d-none d-md-table-cell" style = "width: 100px" scope = "col">تصویر اسلاید</th>-->
 <!--                    <th scope = "col">عنوان</th>-->
 <!--                    <th scope = "col">دسته</th>-->
                     <th class = "d-none d-md-table-cell" scope = "col">تصویر دستور پخت</th>
@@ -21,11 +21,11 @@
 
                 <tr :id = "'row_'+data.id" v-for = "(data, index) in allData" :key = "data.id" :data-index = "index">
                     <td>{{ index + 1 }}</td>
-                    <td class = "d-none d-md-table-cell" style = "width: 150px">
-                       <router-link :to="'/panel/food/slide/'+data.id">
-                         <img v-if = "data.image" :src = "data.image" width = "80" alt = "">
-                       </router-link>
-                    </td>
+<!--                    <td class = "d-none d-md-table-cell" style = "width: 150px">-->
+<!--                       <router-link :to="'/panel/food/slide/'+data.id">-->
+<!--                         <img v-if = "data.image" :src = "data.image" width = "80" alt = "">-->
+<!--                       </router-link>-->
+<!--                    </td>-->
                     <td class = "d-none d-md-table-cell" >
                         <img v-if = "data.article.image" :src = "data.article.image" width = "80" alt = "">
                     </td>

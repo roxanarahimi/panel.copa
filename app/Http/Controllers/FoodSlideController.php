@@ -24,8 +24,8 @@ class FoodSlideController extends Controller
                 "pages" => $pages_count,
                 "total" => $data->total(),
                 "labels" => $labels,
-                "title" => 'اسلاید غذاها',
-                "tooltip_new" => 'ثبت اسلاید غذای جدید',
+                "title" => 'رسپی های صفحه اصلی',
+                "tooltip_new" => 'انتخاب رسپی جدید',
 
             ], 200);
         } catch (\Exception $exception) {

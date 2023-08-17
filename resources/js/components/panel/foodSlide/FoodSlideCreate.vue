@@ -8,14 +8,14 @@
           <div class="card">
             <div class="card-body">
               <form id="editForm" @click="e => enableClick">
-                <div class="row">
-                  <div class="col-12 mb-3">
-                    <label class="form-label">تصویر</label><br/>
-                    <image-cropper :isPng="isPng" name="" caption="" :hasCaption="hasCaption"
-                                   :isRequired="imgRequired" :aspect="aspect"/>
-                    <div id="imageHelp" class="form-text error"></div>
-                  </div>
-                </div>
+<!--                <div class="row">-->
+<!--                  <div class="col-12 mb-3">-->
+<!--                    <label class="form-label">تصویر</label><br/>-->
+<!--                    <image-cropper :isPng="isPng" name="" caption="" :hasCaption="hasCaption"-->
+<!--                                   :isRequired="imgRequired" :aspect="aspect"/>-->
+<!--                    <div id="imageHelp" class="form-text error"></div>-->
+<!--                  </div>-->
+<!--                </div>-->
                 <div class="row">
 
 

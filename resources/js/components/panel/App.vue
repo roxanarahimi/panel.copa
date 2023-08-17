@@ -102,13 +102,13 @@
 <!--                            <span class="sidebar_title">اسلاید ها</span>-->
 <!--                        </router-link>-->
 <!--                    </li>-->
-<!--                  <li>-->
-<!--                    <router-link to="/panel/food/slides" class="nav-link text-white"-->
-<!--                                 :class="{active: $route.fullPath ==='/panel/food/slides'}">-->
-<!--                      <i title="اسلایدر غذاها" class="bi bi-collection-fill me-2"></i>-->
-<!--                      <span class="sidebar_title">اسلایدر غذاها</span>-->
-<!--                    </router-link>-->
-<!--                  </li>-->
+                  <li>
+                    <router-link to="/panel/food/slides" class="nav-link text-white"
+                                 :class="{active: $route.fullPath ==='/panel/food/slides'}">
+                      <i title="اسلایدر غذاها" class="bi bi-collection-fill me-2"></i>
+                      <span class="sidebar_title">اسلایدر غذاها</span>
+                    </router-link>
+                  </li>
                     <!--                    <li>-->
                     <!--                        <router-link to="/panel/icon" class="nav-link text-white"-->
                     <!--                                     :class="{active: $route.fullPath ==='/panel/icon'}">-->
