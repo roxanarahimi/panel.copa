@@ -18,6 +18,8 @@ class ProductResource extends JsonResource
         if($this->relatedProducts){
             foreach ($this->relatedProducts as $item){
                 $item->relatedProductt->value = $item->relatedProductt->id;
+                $thumb2 = $item->image ? str_replace('.png','_thumb.png', $item->image) : '';
+                $item->thumb = $thumb2;
                 $relatedProducts[] = $item->relatedProductt;
             }
         }
