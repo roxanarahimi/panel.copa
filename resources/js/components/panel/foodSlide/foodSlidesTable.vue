@@ -5,9 +5,6 @@
                 <thead>
                 <tr>
                     <th scope = "col"></th>
-<!--                    <th class = "d-none d-md-table-cell" style = "width: 100px" scope = "col">تصویر اسلاید</th>-->
-<!--                    <th scope = "col">عنوان</th>-->
-<!--                    <th scope = "col">دسته</th>-->
                     <th class = "d-none d-md-table-cell" scope = "col">تصویر دستور پخت</th>
                    <th class = "d-none d-xl-table-cell" scope = "col">عنوان دستور پخت</th>
                     <th class = "d-none d-md-table-cell" scope = "col">تصویر محصول</th>
