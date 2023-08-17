@@ -1268,7 +1268,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
                 _context5.next = 7;
                 return axios.post('/api/panel/foodSlide/' + _this3.$route.params.id, {
-                  image: document.getElementById('Image__code').value,
+                  // image: document.getElementById('Image__code').value,
                   article_id: document.getElementById('article_id').value
                 }).then(function (response) {
                   console.log(response);

@@ -1181,7 +1181,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
                 _context4.next = 7;
                 return axios.post('/api/panel/foodSlide', {
-                  image: document.getElementById('Image__code').value,
+                  // image: document.getElementById('Image__code').value,
                   article_id: document.getElementById('article_id').value
                 }).then(function (response) {
                   console.log(response.data);
@@ -2197,7 +2197,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\nspan i {\n  cursor: pointer;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\nspan i {\n    cursor: pointer;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

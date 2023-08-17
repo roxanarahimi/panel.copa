@@ -125,7 +125,6 @@ export default {
       });
 
       if (emptyFieldsCount === 0) {
-
         await axios.post('/api/panel/foodSlide/' + this.$route.params.id,
             {
               // image: document.getElementById('Image__code').value,
