@@ -1304,7 +1304,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }
 
       if (files[0].type == 'video/mp4') {
-        if (files[0].size > 20000) {
+        if (files[0].size > 20000000) {
           document.querySelector('#video').value = null;
           document.querySelector('#code').value = null;
           alert('حداکثر سایز مجاز 20 مگابایت میباشد');
