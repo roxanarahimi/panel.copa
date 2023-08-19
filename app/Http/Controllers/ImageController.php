@@ -44,7 +44,6 @@ class ImageController extends Controller
 
         try {
             $image_name = $path . $name;
-
             $image = imagecreatefrompng($image_name);
             $width = imagesx($image);
             $height = imagesy($image);

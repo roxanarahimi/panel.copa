@@ -142,6 +142,23 @@ Route::controller(App\Http\Controllers\BlogController::class)->group(function ()
         Route::get('/latest/blog', 'latest');
     });
 });
+Route::controller(App\Http\Controllers\TeaserController::class)->group(function () {
+
+    Route::get('/teaser', 'indexSite');
+    Route::get('/teaser/{teaser}', 'show');
+    Route::get('/latest/teaser', 'latestSite');
+
+    Route::prefix('panel')->group(function () {
+        Route::get('/teaser', 'index');
+        Route::get('/teaser/{teaser}', 'show');
+        Route::post('/teaser', 'store');
+        Route::post('/teaser/{teaser}', 'update');
+        Route::get('/delete/teaser/{id}', 'destroy');
+
+        Route::get('/active/teaser/{teaser}', 'activeToggle');
+        Route::get('/latest/teaser', 'latest');
+    });
+});
 Route::controller(App\Http\Controllers\BlogCategoryController::class)->group(function () {
 
     Route::get('/category/blog', 'indexSite');

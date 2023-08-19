@@ -185,6 +185,31 @@ const routes = [
         component: () => import(/* webpackChunkName: "Blog" */ '../js/components/panel/blog/Blog'),
         params: true
     },
+    {
+        path: "/panel/teasers",
+        component: () => import(/* webpackChunkName: "teaserAllData" */ './components/panel/allData'),
+        name: "teaserAllData",
+        params: true,
+        props: true
+    },
+    {
+        path: "/panel/new/teaser",
+        name: "TeaserCreate",
+        component: () => import(/* webpackChunkName: "TeaserCreate" */ '../js/components/panel/teaser/TeaserCreate'),
+        params: true
+    },
+    {
+        path: "/panel/edit/teaser/:id",
+        name: "TeaserEdit",
+        component: () => import(/* webpackChunkName: "TeaserEdit" */ '../js/components/panel/teaser/TeaserEdit'),
+        params: true
+    },
+    {
+        path: "/panel/teaser/:id",
+        name: "Teaser",
+        component: () => import(/* webpackChunkName: "Teaser" */ '../js/components/panel/teaser/Teaser'),
+        params: true
+    },
 
 
 

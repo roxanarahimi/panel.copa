@@ -109,6 +109,13 @@
                       <span class="sidebar_title">اسلایدر غذاها</span>
                     </router-link>
                   </li>
+                   <li>
+                    <router-link to="/panel/teasers" class="nav-link text-white"
+                                 :class="{active: $route.fullPath ==='/panel/teasers'}">
+                      <i title="تیزرها" class="bi bi-camera-reels-fill me-2"></i>
+                      <span class="sidebar_title">تیزرها</span>
+                    </router-link>
+                  </li>
                     <!--                    <li>-->
                     <!--                        <router-link to="/panel/icon" class="nav-link text-white"-->
                     <!--                                     :class="{active: $route.fullPath ==='/panel/icon'}">-->
