@@ -345,7 +345,10 @@ class ProductController extends Controller
         try {
             $data = Product::orderBy('id')->where('product_category_id', $id)->where('active',1)->get();
 
-
+            foreach ($data as $item){
+                $thumb2 = $item->image ? str_replace('.png','_thumb.png', $item->image) : '';
+                $item->thumb = $thumb2;
+            }
             return response([
                 "data"=>$data,
 
