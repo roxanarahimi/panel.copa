@@ -167,13 +167,12 @@ export default {
       errors: [],
       imgRequired: false,
       hasCaption: false,
-      aspect: 310 / 410,
+      aspect: 1 / 1,
       isDefined: false,
       enableClick: true,
       // tags: [],
       articles: [],
       isPng: true,
-
     }
   },
 

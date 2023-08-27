@@ -139,10 +139,9 @@ export default {
       errors: [],
       imgRequired: true,
       hasCaption: false,
-      aspect: 310 / 410,
+      aspect: 1 / 1,
       isPng: true,
       articles: [],
-
       // tags: [{"label": "", "uri": ""}],
     }
   },
