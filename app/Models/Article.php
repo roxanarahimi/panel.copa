@@ -30,4 +30,8 @@ class Article extends Model
     {
         return $this->hasOne(FoodSlide::class, 'article_id','id');
     }
+    public function relatedProducts()
+    {
+        return $this->hasMany(ArticleRelatedProduct::class, 'article_id', 'id');
+    }
 }

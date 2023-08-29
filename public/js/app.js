@@ -20910,7 +20910,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   , _hoisted_11), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $setup.selectedFile]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <div v-show = \"selectedFile\" v-if = \"hasCaption\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            <input type = \"text\" :id = \"'Image_'+name+'_alt'\" class = \"form-control mb-2\" style = \"width: 260px\" placeholder = \" alt (اختیاری) \">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            <input type = \"text\" :id = \"'Image_'+name+'_max_width'\" class = \"form-control mb-2\" style = \"width: 260px\" placeholder = \"حد اکثر عرض مجاز (اختیاری)\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     id: 'image' + $props.name,
     ref: "imageInput",
-    accept: ".jpg, .jpeg, .png",
+    accept: ".png",
     onChange: _cache[2] || (_cache[2] = function () {
       return $setup.fileChanged && $setup.fileChanged.apply($setup, arguments);
     }),

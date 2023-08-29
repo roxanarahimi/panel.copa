@@ -8,10 +8,10 @@
                     <th class = "d-none d-md-table-cell" style = "width: 100px" scope = "col">تصویر</th>
                     <th scope = "col">عنوان</th>
                     <th scope = "col">دسته</th>
-                    <th class = "d-none d-md-table-cell" style = "width: 100px" scope = "col">تصویر محصول</th>
+                    <th class = "d-none d-md-table-cell" scope = "col">محصولات مرتبط</th>
 
                     <!--                    <th class = "d-none d-xl-table-cell" scope = "col">متن</th>-->
-                    <th class = "d-none d-xl-table-cell" scope = "col">عنوان محصول</th>
+<!--                    <th class = "d-none d-xl-table-cell" scope = "col">عنوان محصول</th>-->
 <!--                    <th class = "d-none d-xl-table-cell" scope = "col">با طعم</th>-->
                     <th class = "d-none d-md-table-cell" scope = "col">تاریخ ثبت</th>
                     <th scope = "col" class = "active_cell">وضعیت</th>
@@ -33,10 +33,12 @@
                         {{ data.category.title }}
                     </td>
 <!--                    <td class = "d-none d-xl-table-cell text_cell">{{ // data.text }}</td>-->
-                    <td class = "d-none d-md-table-cell" style = "width: 100px">
-                        <img v-if = "data.product.image" :src = "data.product.image" width = "80" alt = "">
+                    <td class = "d-none d-md-table-cell" >
+<!--                        <img v-if = "data.product.image" :src = "data.product.image" width = "80" alt = "">-->
                     </td>
-                    <td class = "d-none d-xl-table-cell text_cell">{{ data.product.title }}</td>
+<!--                    <td class = "d-none d-xl-table-cell text_cell">-->
+<!--&lt;!&ndash;                        {{ data.product.title }}&ndash;&gt;-->
+<!--                    </td>-->
 <!--                    <td class = "d-none d-xl-table-cell text_cell">{{ // data.text4 }}</td>-->
                     <td class = "d-none d-md-table-cell date_cell">{{ data.created_at }}</td>
                     <td class="active_cell">

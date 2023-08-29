@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\ArticleResource;
 use App\Models\Article;
+use App\Models\ArticleRelatedProduct;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -80,13 +81,24 @@ class ArticleController extends Controller
             return response()->json($validator->messages(), 422);
         }
         try {
-            $data = Article::create($request->except('image'));
+            $data = Article::create($request->except('image','related_products'));
             if ($request['image']) {
                 $name = 'article_' . $data['id'] . '_' . uniqid() . '.png';
                 $image_path = (new ImageController)->uploadImage($request['image'], $name, 'images/articles/');
                 $data->update(['image' => '/' . $image_path]);
                 (new ImageController)->resizeImage('images/articles/',$name);
 
+            }
+            $relatedZ = ArticleRelatedProduct::where('article_id', $request['id'])->get();
+            foreach ($relatedZ as $item){ $item->delete();}
+
+            if ($request['related_products']){
+                foreach ($request['related_products'] as $item){
+                    ArticleRelatedProduct::create([
+                        'article_id' => $data['id'],
+                        'related_product_id' => $item,
+                    ]);
+                }
             }
 
 
@@ -113,7 +125,7 @@ class ArticleController extends Controller
             return response()->json($validator->messages(), 422);
         }
         try {
-            $article->update($request->except('image'));
+            $article->update($request->except('image','related_products'));
 
             if ($request['image']) {
                 $name = 'article_' . $article['id'] . '_' . uniqid() . '.png';
@@ -128,6 +140,18 @@ class ArticleController extends Controller
                 (new ImageController)->resizeImage('images/articles/',$name);
 
 
+            }
+
+            $relatedZ = ArticleRelatedProduct::where('article_id', $request['id'])->get();
+            foreach ($relatedZ as $item){ $item->delete();}
+
+            if ($request['related_products']){
+                foreach ($request['related_products'] as $item){
+                    ArticleRelatedProduct::create([
+                        'article_id' => $article['id'],
+                        'related_product_id' => $item,
+                    ]);
+                }
             }
 
             return response(new ArticleResource($article), 200);

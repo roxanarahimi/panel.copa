@@ -15,17 +15,31 @@ class ArticleResource extends JsonResource
     public function toArray($request)
     {
         $thumb = $this->image ? str_replace('.png','_thumb.png', $this->image) : '';
+        $relatedProducts =[] ;
+        if($this->relatedProducts){
+            foreach ($this->relatedProducts as $item){
+                $item->relatedProductt->value = $item->relatedProductt->id;
+                $thumb2 = $item->relatedProductt->image ? str_replace('.png','_thumb.png', $item->relatedProductt->image) : '';
+                $item->relatedProductt->thumb = $thumb2;
+                $relatedProducts[] = $item->relatedProductt;
+            }
+        }
         return [
             "id" => (string)$this->id,
             "image" => $this->image,
             "thumb" => $thumb,
             "title" => $this->title,
+            "title_en" => $this->title_en,
+            "subTitle_en" => $this->subTitle_en,
+            "products_en" => $this->products_en,
             "stock" => $this->stock,
             "active" => (boolean)$this->active,
             "ingredients" => $this->ingredients,
             "text" => $this->text,
 
-            "product" => new ProductResource($this->product),
+//            "product" => new ProductResource($this->product),
+            "related_products" => $relatedProducts,
+
 //            "product"=> $this->product,
             "category" => [
                 'id' => $this->category->id,

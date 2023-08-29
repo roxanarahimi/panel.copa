@@ -35,7 +35,7 @@
     <!--            <input type = "text" :id = "'Image_'+name+'_max_width'" class = "form-control mb-2" style = "width: 260px" placeholder = "حد اکثر عرض مجاز (اختیاری)">-->
     <!--        </div>-->
 
-    <input :id="'image'+ name" ref="imageInput" accept=".jpg, .jpeg, .png" @change="fileChanged" type="file"
+    <input :id="'image'+ name" ref="imageInput" accept=".png" @change="fileChanged" type="file"
            :name="'content_image_file'+name" class="form-control d-none">
 
     <input :id="'Image_'+name+'_code'" name="content_image_code" type="text"

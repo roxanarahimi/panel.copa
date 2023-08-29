@@ -76,11 +76,6 @@ class BlogController extends Controller
                 (new ImageController)->resizeImage('images/blogs/',$name);
 
             }
-//            if ($request['image2']) {
-//                $name2 = 'Blog_' . $data['id'] . '_' . uniqid() . '.jpg';
-//                $image_path2 = (new ImageController)->uploadImage($request['image'], $name2, 'images/blogs/');
-//                $data->update(['image2' => '/' . $image_path2]);
-//            }
 
             return response(new BlogResource($data), 201);
         } catch (\Exception $exception) {
@@ -141,7 +136,6 @@ class BlogController extends Controller
                 if (file_exists($file_to_delete)){  unlink($file_to_delete);}
                 if (file_exists($file_to_delete_thumb)){  unlink($file_to_delete_thumb);}
             }
-
             $data->delete();
             return response('Blog deleted', 200);
         } catch (\Exception $exception) {
