@@ -26,15 +26,10 @@
                         <div class = "card-body p-md-5">
 <!--                            <h3  class="mb-5">دستور پخت:</h3>-->
                           <h3 class="mb-5">دستور پخت:</h3>
-
                           <router-link :to="'/panel/article/'+data.article?.id" >
                             <h3 v-if="data.article">{{ data.article?.title }}</h3>
                           </router-link>
                              <img v-if="data.article" class = "img-fluid mb-2" :src = "data.article?.image" width="350" alt = "">
-
-                          <div id = "text" style="font-size: 18px;white-space: pre-line; text-align: right !important" class = "mb-5">
-                            {{ data.article?.text }}
-                          </div>
                         </div>
                     </div>
                 </div>

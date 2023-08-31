@@ -2118,25 +2118,16 @@ var _hoisted_10 = {
 };
 var _hoisted_11 = ["src"];
 var _hoisted_12 = {
-  id: "text",
-  style: {
-    "font-size": "18px",
-    "white-space": "pre-line",
-    "text-align": "right !important"
-  },
-  "class": "mb-5"
-};
-var _hoisted_13 = {
   key: 1
 };
 
-var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "fw-bold"
 }, "این اسلاید موجود نیست", -1
 /* HOISTED */
 );
 
-var _hoisted_15 = [_hoisted_14];
+var _hoisted_14 = [_hoisted_13];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
@@ -2146,7 +2137,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     appear: ""
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      var _ctx$data$article, _ctx$data$article2, _ctx$data$article4, _ctx$data$article5;
+      var _ctx$data$article, _ctx$data$article2, _ctx$data$article4;
 
       return [_ctx.data ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("section", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_ctx$data$article = _ctx.data.article) === null || _ctx$data$article === void 0 ? void 0 : _ctx$data$article.title), 1
       /* TEXT */
@@ -2185,9 +2176,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         alt: ""
       }, null, 8
       /* PROPS */
-      , _hoisted_11)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_ctx$data$article5 = _ctx.data.article) === null || _ctx$data$article5 === void 0 ? void 0 : _ctx$data$article5.text), 1
-      /* TEXT */
-      )])])])])])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_13, _hoisted_15))];
+      , _hoisted_11)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])])])])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_12, _hoisted_14))];
     }),
     _: 1
     /* STABLE */
