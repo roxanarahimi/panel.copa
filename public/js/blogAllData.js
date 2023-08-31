@@ -3301,7 +3301,10 @@ var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 }, "عنوان دستور پخت"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <th class = \"d-none d-md-table-cell\" scope = \"col\">تصویر محصول</th>"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                   <th class = \"d-none d-xl-table-cell\" scope = \"col\">عنوان محصول</th>"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "d-none d-md-table-cell",
   scope: "col"
-}, "تاریخ ثبت"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <th scope = \"col\" class = \"active_cell\">وضعیت</th>"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+}, "تاریخ ثبت"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  scope: "col",
+  "class": "active_cell"
+}, "وضعیت"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   scope: "col"
 })])], -1
 /* HOISTED */
@@ -3318,8 +3321,29 @@ var _hoisted_8 = {
 var _hoisted_9 = {
   "class": "d-none d-md-table-cell date_cell"
 };
+var _hoisted_10 = {
+  "class": "active_cell"
+};
+var _hoisted_11 = ["onClick"];
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "bi bi-eye-fill"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_13 = [_hoisted_12];
+var _hoisted_14 = ["onClick"];
+
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "bi bi-eye-slash-fill"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_16 = [_hoisted_15];
+
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   role: "button",
   "data-bs-toggle": "dropdown",
   "aria-expanded": "false"
@@ -3329,15 +3353,16 @@ var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_11 = {
+var _hoisted_18 = {
   "class": "dropdown-menu",
   "aria-labelledby": "navbarScrollingDropdown"
 };
 
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" مشاهده ");
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" مشاهده ");
 
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" ویرایش ");
+var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" ویرایش ");
 
+var _hoisted_21 = ["onClick"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
@@ -3359,7 +3384,23 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* TEXT */
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <td class = \"d-none d-md-table-cell\" >"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <img v-if = \"data.article.image\" :src = \"data.article.product.image\" width = \"80\" alt = \"\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    </td>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <td class = \"d-none d-xl-table-cell text_cell\">{{ data.article.product.title }}</td>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(data.created_at), 1
     /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <td class=\"active_cell\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <span @click=\"activeToggle(model,data.id)\" v-if=\"data.active == 1\" class=\"badge bg-success text-light\"><i class=\"bi bi-eye-fill\"></i></span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        <span @click=\"activeToggle(model,data.id)\" v-if=\"data.active == 0\" class=\"badge bg-danger text-light\"><i class=\"bi bi-eye-slash-fill\"></i></span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    </td>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_10, [data.active == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", {
+      key: 0,
+      onClick: function onClick($event) {
+        return $setup.activeToggle($props.model, data.id);
+      },
+      "class": "badge bg-success text-light"
+    }, _hoisted_13, 8
+    /* PROPS */
+    , _hoisted_11)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), data.active == 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", {
+      key: 1,
+      onClick: function onClick($event) {
+        return $setup.activeToggle($props.model, data.id);
+      },
+      "class": "badge bg-danger text-light"
+    }, _hoisted_16, 8
+    /* PROPS */
+    , _hoisted_14)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
       to: '/panel/food/slide/' + data.id,
       "class": "dropdown-item",
       style: {
@@ -3367,7 +3408,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       }
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-        return [_hoisted_12];
+        return [_hoisted_19];
       }),
       _: 2
       /* DYNAMIC */
@@ -3382,14 +3423,26 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       }
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-        return [_hoisted_13];
+        return [_hoisted_20];
       }),
       _: 2
       /* DYNAMIC */
 
     }, 1032
     /* PROPS, DYNAMIC_SLOTS */
-    , ["to"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <a class = \"dropdown-item\" @click = \"showDeleteModal(data.id)\" style = \"text-align: right !important\" data-bs-toggle = \"modal\" data-bs-target = \"#exampleModal\">حذف</a>")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <li><hr class=\"dropdown-divider\"></li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>")])])], 8
+    , ["to"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+      "class": "dropdown-item",
+      onClick: function onClick($event) {
+        return $setup.showDeleteModal(data.id);
+      },
+      style: {
+        "text-align": "right !important"
+      },
+      "data-bs-toggle": "modal",
+      "data-bs-target": "#exampleModal"
+    }, "حذف", 8
+    /* PROPS */
+    , _hoisted_21)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <li><hr class=\"dropdown-divider\"></li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>")])])], 8
     /* PROPS */
     , _hoisted_5);
   }), 128

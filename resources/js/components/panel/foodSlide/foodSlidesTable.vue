@@ -10,7 +10,7 @@
 <!--                    <th class = "d-none d-md-table-cell" scope = "col">تصویر محصول</th>-->
 <!--                   <th class = "d-none d-xl-table-cell" scope = "col">عنوان محصول</th>-->
                     <th class = "d-none d-md-table-cell" scope = "col">تاریخ ثبت</th>
-<!--                    <th scope = "col" class = "active_cell">وضعیت</th>-->
+                    <th scope = "col" class = "active_cell">وضعیت</th>
                     <th scope = "col"></th>
                 </tr>
                 </thead>
@@ -32,10 +32,10 @@
 <!--                    </td>-->
 <!--                    <td class = "d-none d-xl-table-cell text_cell">{{ data.article.product.title }}</td>-->
                     <td class = "d-none d-md-table-cell date_cell">{{ data.created_at }}</td>
-<!--                    <td class="active_cell">-->
-<!--                        <span @click="activeToggle(model,data.id)" v-if="data.active == 1" class="badge bg-success text-light"><i class="bi bi-eye-fill"></i></span>-->
-<!--                        <span @click="activeToggle(model,data.id)" v-if="data.active == 0" class="badge bg-danger text-light"><i class="bi bi-eye-slash-fill"></i></span>-->
-<!--                    </td>-->
+                    <td class="active_cell">
+                        <span @click="activeToggle(model,data.id)" v-if="data.active == 1" class="badge bg-success text-light"><i class="bi bi-eye-fill"></i></span>
+                        <span @click="activeToggle(model,data.id)" v-if="data.active == 0" class="badge bg-danger text-light"><i class="bi bi-eye-slash-fill"></i></span>
+                    </td>
                     <td>
                         <span role = "button" data-bs-toggle = "dropdown" aria-expanded = "false"><i class = "bi bi-three-dots-vertical"></i></span>
                         <ul class = "dropdown-menu" aria-labelledby = "navbarScrollingDropdown">
@@ -46,7 +46,7 @@
                                 <router-link :to = "'/panel/edit/food/slide/'+data.id" class = "dropdown-item" style = "text-align: right !important">
                                     ویرایش
                                 </router-link>
-<!--                                <a class = "dropdown-item" @click = "showDeleteModal(data.id)" style = "text-align: right !important" data-bs-toggle = "modal" data-bs-target = "#exampleModal">حذف</a>-->
+                                <a class = "dropdown-item" @click = "showDeleteModal(data.id)" style = "text-align: right !important" data-bs-toggle = "modal" data-bs-target = "#exampleModal">حذف</a>
                             </li>
                             <!--                                <li><hr class="dropdown-divider"></li>-->
                             <!--                                <li><a class="dropdown-item" href="#">Something else here</a></li>-->
