@@ -38,8 +38,7 @@
                         <div class="card-body p-md-5">
                             <h3 class="mb-5">مواد لازم:</h3>
 
-                            <div style="font-size: 18px;white-space: pre-line; text-align: right !important"
-                                 class="mb-5">{{ data.ingredients }}
+                            <div style="font-size: 18px;white-space: pre-line; text-align: right !important" class="mb-5">{{ data.ingredients }}
                             </div>
 
                         </div>
