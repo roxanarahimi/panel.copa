@@ -57,16 +57,19 @@ class ProductController extends Controller
         // dd($request->all());
         try {
             $data = Product::whereHas('activeCategory')->with('category')->where('active', 1);
+            if ($request['cat'] != '') {
+                $data = $data->where('product_category_id', $request['cat']);
+            }
             if ($request['stock'] == 'true') {
                 $data = $data->where('stock', '>', 0);
             }elseif ($request['stock'== 'limited']){
                 $data = $data->where('stock', '>', 0)->where('stock','<',5);
             }
-            if ($request['cat_ids'] != '') {
-                $ids = explode(',', $request['cat_ids']);
-                $data = $data->whereIn('product_category_id', $ids);
-
-            }
+//            if ($request['cat_ids'] != '') {
+//                $ids = explode(',', $request['cat_ids']);
+//                $data = $data->whereIn('product_category_id', $ids);
+//
+//            }
             if ($request['off'] == 'true') {
                 $data = $data->where('off', '>', 0)->where('stock', '>', 0);
 
