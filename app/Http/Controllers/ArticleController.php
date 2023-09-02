@@ -36,17 +36,12 @@ class ArticleController extends Controller
     public function indexSite(Request $request)
     {
         try {
-            $data = Article::orderByDesc('id')->where('active',1);
+            $data = Article::orderByDesc('id')->where('title', 'Like', '%' . $request['search'] . '%')->where('active',1);
 
-//            $data = Article::whereHas('activeCategory')->with('category')->where('active', 1);
             if ($request['cat'] != '') {
                 $data = $data->where('article_category_id', $request['cat']);
             }
-            if ($request['search'] != '') {
-                $data = $data->where('title', 'Like', '%' . $request['search'] . '%');
-            }
             $data = $data->get();
-
 
             return response([
                 "data" => ArticleResource::collection($data),

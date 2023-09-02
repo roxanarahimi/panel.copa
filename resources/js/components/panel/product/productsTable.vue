@@ -23,7 +23,7 @@
                     :data-index="index">
                     <td class="table-first-cell" scope="row">{{ index + 1 }}</td>
                     <td class="d-none d-md-table-cell" style="width: 100px">
-                        <img v-if="data.image" :src="data.image" width="80" alt="">
+                        <img v-if="data.thumb" :src="data.thumb" width="80" alt="">
                         <!--       tumb-->
                     </td>
                     <td>

@@ -18,7 +18,7 @@
                 <tbody>
                 <tr :id="'row_'+data.id" v-for="(data, index) in allData" :key="data.id" :data-index="index">
                     <td class="">{{ index + 1 }}</td>
-                    <td class=""><img :src="data.image" width="80" alt=""></td>
+                    <td class=""><img :src="data.thumb" width="80" alt=""></td>
                     <td class="">{{ data.title }}</td>
                     <td class="">{{ data.subsets.length }}</td>
                     <td class="">{{ data.created_at }}</td>

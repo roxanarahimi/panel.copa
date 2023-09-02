@@ -23,7 +23,7 @@
                 <tr :id = "'row_'+data.id" v-for = "(data, index) in allData" :key = "data.id" :data-index = "index">
                     <td>{{ index + 1 }}</td>
                     <td class = "d-none d-md-table-cell" style = "width: 100px">
-                        <img v-if = "data.image" :src = "data.image" width = "80" alt = "">
+                        <img v-if = "data.thumb" :src = "data.thumb" width = "80" alt = "">
                     </td>
                     <td>
                         <router-link :to = "'/panel/article/'+data.id">{{ data.title }}</router-link>
@@ -34,7 +34,7 @@
                     </td>
 <!--                    <td class = "d-none d-xl-table-cell text_cell">{{ // data.text }}</td>-->
                     <td class = "d-none d-md-table-cell" >
-<!--                        <img v-if = "data.product.image" :src = "data.product.image" width = "80" alt = "">-->
+<!--                        <img v-if = "data.product.thumb" :src = "data.product.thumb" width = "80" alt = "">-->
                     </td>
 <!--                    <td class = "d-none d-xl-table-cell text_cell">-->
 <!--&lt;!&ndash;                        {{ data.product.title }}&ndash;&gt;-->
