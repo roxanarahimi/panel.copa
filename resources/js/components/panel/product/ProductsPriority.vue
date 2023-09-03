@@ -12,8 +12,8 @@
                         <!--                        <div class = "card-body ">-->
                         <draggable ghost-class = "moving-card" :animation = "500" v-model = "allData" @start = "drag=true" @end = "drag=false"
                                    @drop = "updateSlidesOrder" item-key = "id" id = "slides_wrapper" class = "row px-4">
-                            <template #item = "{element}">
-                                <div :data-id = "element.id" class = "element-cards card  mb-2 me-2 col-md-8 px-0" style = "cursor: pointer">
+                            <template #item = "{element , index}" :key="index">
+                                <div :data-id = "element.id" :data-index="element.index" :data-row-index="index" class = "element-cards card  mb-2 me-2 col-md-8 px-0" style = "cursor: pointer">
                                     <div class = "card-body p-2">
                                         <img v-if = "element.thumb" class = "rounded d-inline-block my-1" width = "80" :src = "element.thumb">
                                         <div v-else class = "rounded d-inline-block my-1" style = "width: 80px; height: 20px;"></div>
@@ -22,26 +22,6 @@
                                                 {{ element.title }}</small>
 <!--                                            <small class = "d-block fw-lighter ms-2 mb-1" style = "vertical-align: bottom; font-size:13px">{{-->
 <!--                                                element.subTitle }}</small>-->
-                                        </div>
-                                        <div class = "float-end">
-                                            <span class = "me-3">
-                                                <span @click = "pActiveToggle(element.id)" v-if = "element.active" class = "badge bg-success text-light"><i class = "bi bi-eye-fill"></i></span>
-                                                <span @click = "pActiveToggle(element.id)" v-else class = "badge bg-danger text-light"><i class = "bi bi-eye-slash-fill"></i></span>
-                                            </span>
-                                            <span role = "button" data-bs-toggle = "dropdown" aria-expanded = "false">
-                                        <i class = "bi bi-three-dots-vertical"></i></span>
-                                            <ul class = "dropdown-menu" aria-labelledby = "navbarScrollingDropdown">
-
-                                                <li>
-                                                    <!--                                            <router-link :to = "'/slide/'+data.id" class = "dropdown-item" style = "text-align: right !important">-->
-                                                    <!--                                                مشاهده-->
-                                                    <!--                                            </router-link>-->
-                                                    <router-link :to = "'/panel/edit/slide/'+element.id" class = "dropdown-item" style = "text-align: right !important">
-                                                        ویرایش
-                                                    </router-link>
-                                                    <a class = "dropdown-item" @click = "showDeleteModal(element.id)" style = "text-align: right !important" data-bs-toggle = "modal" data-bs-target = "#exampleModal">حذف</a>
-                                                </li>
-                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -106,7 +86,7 @@
 
 
                 await children.forEach((item) => {
-                    if (index != item.index){
+                    if (item.getAttribute('data-index') != index){
                         axios.post('/api/panel/sort/product/' + item.getAttribute('data-id'), {
                             index: index,
                         })
