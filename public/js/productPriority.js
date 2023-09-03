@@ -73,13 +73,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 index = 0;
                 _context2.next = 5;
                 return children.forEach(function (item) {
-                  axios.post('/api/panel/sort/product/' + item.getAttribute('data-id'), {
-                    index: index
-                  }).then(function (response) {
-                    console.log(response);
-                  })["catch"](function (error) {
-                    console.log(error);
-                  });
+                  if (index != item.index) {
+                    axios.post('/api/panel/sort/product/' + item.getAttribute('data-id'), {
+                      index: index
+                    }).then(function (response) {
+                      console.log(response);
+                    })["catch"](function (error) {
+                      console.log(error);
+                    });
+                  }
+
                   index++;
                 });
 
