@@ -106,15 +106,17 @@
 
 
                 await children.forEach((item) => {
-                    axios.post('/api/panel/sort/product/' + item.getAttribute('data-id'), {
-                        index: index,
-                    })
-                        .then((response) => {
-                            console.log(response);
+                    if (index != item.index){
+                        axios.post('/api/panel/sort/product/' + item.getAttribute('data-id'), {
+                            index: index,
                         })
-                        .catch((error) => {
-                            console.log(error);
-                        });
+                            .then((response) => {
+                                console.log(response);
+                            })
+                            .catch((error) => {
+                                console.log(error);
+                            });
+                    }
                     index++;
 
                 });
