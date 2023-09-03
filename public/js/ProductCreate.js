@@ -834,8 +834,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           hasError: _ctx.errors.subTitle
         }, "form-control"]),
         id: "subTitle",
-        "aria-describedby": "subTitleHelp",
-        required: ""
+        "aria-describedby": "subTitleHelp"
       }, null, 2
       /* CLASS */
       ), _hoisted_23, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.errors.subTitle, function (e) {

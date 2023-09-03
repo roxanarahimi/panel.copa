@@ -37,7 +37,7 @@
                                     <div class="col-md-6 mb-3">
                                         <label for="subTitle" class="form-label">زیرنویس</label>
                                         <input type="text" :class="{hasError: errors.subTitle}" class="form-control"
-                                               id="subTitle" aria-describedby="subTitleHelp" required>
+                                               id="subTitle" aria-describedby="subTitleHelp">
                                         <div id="subTitleHelp" class="form-text error"></div>
                                         <p class="form-text error m-0" v-for="e in errors.subTitle">{{ e }}</p>
                                     </div>
