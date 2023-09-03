@@ -712,8 +712,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         }, "en form-control"]),
         id: "title_en",
         value: $data.data.title_en,
-        "aria-describedby": "title_enHelp",
-        required: ""
+        "aria-describedby": "title_enHelp"
       }, null, 42
       /* CLASS, PROPS, HYDRATE_EVENTS */
       , _hoisted_20), _hoisted_21, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors.title_en, function (e) {
@@ -729,8 +728,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           hasError: $data.errors.subTitle
         }, "form-control"]),
         id: "subTitle",
-        "aria-describedby": "subTitleHelp",
-        required: ""
+        "aria-describedby": "subTitleHelp"
       }, null, 10
       /* CLASS, PROPS */
       , _hoisted_25), _hoisted_26, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors.subTitle, function (e) {
@@ -798,8 +796,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         "class": "form-select",
         id: "category",
         "aria-describedby": "categoryHelp",
-        "aria-label": "category",
-        required: ""
+        "aria-label": "category"
       }, [_hoisted_45, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.categories, function (category) {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
           selected: $data.data.category.id == category.id,

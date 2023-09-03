@@ -29,7 +29,7 @@
                                     <div class="col-md-6 mb-3">
                                         <label for="title_en" class="form-label">عنوان انگلیسی</label>
                                         <input type="text" :class="{hasError: errors.title_en}" class="en form-control"
-                                               id="title_en" aria-describedby="title_enHelp" required>
+                                               id="title_en" aria-describedby="title_enHelp">
                                         <div id="title_enHelp" class="form-text error"></div>
                                         <p class="form-text error m-0" v-for="e in errors.title_en">{{ e }}</p>
 

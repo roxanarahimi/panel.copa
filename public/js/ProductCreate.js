@@ -819,8 +819,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           hasError: _ctx.errors.title_en
         }, "en form-control"]),
         id: "title_en",
-        "aria-describedby": "title_enHelp",
-        required: ""
+        "aria-describedby": "title_enHelp"
       }, null, 2
       /* CLASS */
       ), _hoisted_19, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.errors.title_en, function (e) {
