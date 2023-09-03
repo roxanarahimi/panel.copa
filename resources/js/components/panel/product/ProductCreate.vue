@@ -18,7 +18,7 @@
                                 </div>
                                 <div class="row">
 
-                                    <div class="col-md-4 mb-3">
+                                    <div class="col-md-6 mb-3">
                                         <label for="title" class="form-label">عنوان</label>
                                         <input type="text" :class="{hasError: errors.title}" class="form-control"
                                                id="title" aria-describedby="titleHelp" required>
@@ -26,7 +26,7 @@
                                         <p class="form-text error m-0" v-for="e in errors.title">{{ e }}</p>
 
                                     </div>
-                                    <div class="col-md-4 mb-3">
+                                    <div class="col-md-6 mb-3">
                                         <label for="title_en" class="form-label">عنوان انگلیسی</label>
                                         <input type="text" :class="{hasError: errors.title_en}" class="en form-control"
                                                id="title_en" aria-describedby="title_enHelp" required>
@@ -34,18 +34,25 @@
                                         <p class="form-text error m-0" v-for="e in errors.title_en">{{ e }}</p>
 
                                     </div>
-                                    <div class="col-md-4 mb-3">
+                                    <div class="col-md-6 mb-3">
                                         <label for="subTitle" class="form-label">زیرنویس</label>
                                         <input type="text" :class="{hasError: errors.subTitle}" class="form-control"
                                                id="subTitle" aria-describedby="subTitleHelp" required>
                                         <div id="subTitleHelp" class="form-text error"></div>
                                         <p class="form-text error m-0" v-for="e in errors.subTitle">{{ e }}</p>
                                     </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="color" class="form-label">رنگ</label>
+                                        <input type="text" :class="{hasError: errors.color}" class="form-control en"
+                                               id="color" aria-describedby="colorHelp" >
+                                        <div id="colorHelp" class="form-text error"></div>
+                                        <p class="form-text error m-0" v-for="e in errors.color">{{ e }}</p>
+                                    </div>
 
                                     <div class="col-md-4 col-lg-4 mb-3">
                                         <label for="flavor" class="form-label">باطعم</label>
                                         <input type="text" :class="{hasError: errors.flavor}"
-                                               class="en form-control text-start" id="flavor">
+                                               class=" form-control text-start" id="flavor">
                                         <div id="flavorHelp" class="form-text error"></div>
                                         <p class="form-text error m-0" v-for="e in errors.flavor">{{ e }}</p>
 
@@ -109,39 +116,39 @@
                                         <div id="textHelp" class="form-text error"></div>
                                         <p class="form-text error m-0" v-for="e in errors.text">{{ e }}</p>
                                     </div>
-                                    <div class="col-md-12 mb-3" id="features">
-                                        <div>
-                                            <label class="form-label mb-1 align-middle">ارزش غذایی در 100 گرم</label>
-                                            <span @click="addFeature" class="px-3 d-inline-block align-middle"><i
-                                                class="bi bi-plus-circle-fill p-0 mt-2 m-0" style="font-size: 15px"></i></span>
-                                        </div>
+<!--                                    <div class="col-md-12 mb-3" id="features">-->
+<!--                                        <div>-->
+<!--                                            <label class="form-label mb-1 align-middle">ارزش غذایی در 100 گرم</label>-->
+<!--                                            <span @click="addFeature" class="px-3 d-inline-block align-middle"><i-->
+<!--                                                class="bi bi-plus-circle-fill p-0 mt-2 m-0" style="font-size: 15px"></i></span>-->
+<!--                                        </div>-->
 
-                                        <div v-for="(item, index) in features" :key="index" class="row tagElement">
-                                            <div class="col-4 col-md-3 mb-3">
-                                                <input type="text" name="featureLabel" class="form-control"
-                                                       @input="updateFeatures" :value="item.label" placeholder="عنوان"
-                                                       required>
-                                                <div class="form-text error"></div>
-                                            </div>
-                                            <div class="col-3 col-md-3 mb-3">
-                                                <input type="text" name="featureValue" class="form-control"
-                                                       @input="updateFeatures" :value="item.value" placeholder="مقدار"
-                                                       required>
-                                                <div class="form-text error"></div>
-                                            </div>
-                                            <div class="col-4 col-md-3 mb-3">
-                                                <input type="text" name="featureUnit" class="form-control"
-                                                       @input="updateFeatures" :value="item.unit"
-                                                       placeholder="واحد اندازه گیری"
-                                                       required>
-                                                <div class="form-text error"></div>
-                                            </div>
-                                            <div class="col-auto mb-3 pt-2">
-                                                <span @click="removeFeature(index)"><i class="bi bi-x-circle-fill m-0 "
-                                                                                       style="font-size: 15px"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
+<!--                                        <div v-for="(item, index) in features" :key="index" class="row tagElement">-->
+<!--                                            <div class="col-4 col-md-3 mb-3">-->
+<!--                                                <input type="text" name="featureLabel" class="form-control"-->
+<!--                                                       @input="updateFeatures" :value="item.label" placeholder="عنوان"-->
+<!--                                                       required>-->
+<!--                                                <div class="form-text error"></div>-->
+<!--                                            </div>-->
+<!--                                            <div class="col-3 col-md-3 mb-3">-->
+<!--                                                <input type="text" name="featureValue" class="form-control"-->
+<!--                                                       @input="updateFeatures" :value="item.value" placeholder="مقدار"-->
+<!--                                                       required>-->
+<!--                                                <div class="form-text error"></div>-->
+<!--                                            </div>-->
+<!--                                            <div class="col-4 col-md-3 mb-3">-->
+<!--                                                <input type="text" name="featureUnit" class="form-control"-->
+<!--                                                       @input="updateFeatures" :value="item.unit"-->
+<!--                                                       placeholder="واحد اندازه گیری"-->
+<!--                                                       required>-->
+<!--                                                <div class="form-text error"></div>-->
+<!--                                            </div>-->
+<!--                                            <div class="col-auto mb-3 pt-2">-->
+<!--                                                <span @click="removeFeature(index)"><i class="bi bi-x-circle-fill m-0 "-->
+<!--                                                                                       style="font-size: 15px"></i></span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
                                     <div class="col-md-12 mb-3">
                                         <BtnSubmit @click.prevent="createInfo">
                                             ثبت
@@ -224,16 +231,16 @@ export default {
                 }
             });
             if (emptyFieldsCount === 0) {
-                let features = [];
-                for (let i = 0; i < document.getElementsByName('featureLabel').length; i++) {
-                    features.push('{"label": "' + document.getElementsByName('featureLabel')[i].value + '",' + ' "value": "' + document.getElementsByName('featureValue')[i].value + '", "unit": "' + document.getElementsByName('featureUnit')[i].value + '"}');
-
-                }
-                if (document.getElementsByName('featureLabel').length === 0) {
-                    features = '[]';
-                } else {
-                    features = '[' + features.toString() + ']';
-                }
+                // let features = [];
+                // for (let i = 0; i < document.getElementsByName('featureLabel').length; i++) {
+                //     features.push('{"label": "' + document.getElementsByName('featureLabel')[i].value + '",' + ' "value": "' + document.getElementsByName('featureValue')[i].value + '", "unit": "' + document.getElementsByName('featureUnit')[i].value + '"}');
+                //
+                // }
+                // if (document.getElementsByName('featureLabel').length === 0) {
+                //     features = '[]';
+                // } else {
+                //     features = '[' + features.toString() + ']';
+                // }
                 let selectedProducts = [];
                 this.value.forEach((element)=>{
                     selectedProducts.push(element.value)
@@ -250,7 +257,8 @@ export default {
                     // ingredients: document.getElementById('ingredients').value,
                     product_category_id: document.getElementById('category').value,
                     text: document.getElementById('text').value,
-                    features: features,
+                    color: document.getElementById('color').value,
+                    // features: features,
                     link: document.getElementById('link').value,
                     related_products: selectedProducts
 
