@@ -2,6 +2,7 @@
     "/js/app.js": "/js/app.js",
     "/js/home.js": "/js/home.js",
     "/js/Categories.js": "/js/Categories.js",
+    "/js/productPriority.js": "/js/productPriority.js",
     "/js/blogAllData.js": "/js/blogAllData.js",
     "/js/ProductCreate.js": "/js/ProductCreate.js",
     "/js/ProductEdit.js": "/js/ProductEdit.js",

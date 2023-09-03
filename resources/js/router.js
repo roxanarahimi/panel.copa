@@ -27,6 +27,13 @@ const routes = [
         params: true
     },
     {
+        path: "/panel/priority/products",
+        component: () => import(/* webpackChunkName: "productPriority" */  './components/panel/product/ProductsPriority'),
+        name: "productPriority",
+        params: true,
+        props: true,
+    },
+    {
         path: "/panel/products",
         component: () => import(/* webpackChunkName: "productAllData" */  './components/panel/allData'),
         name: "productAllData",

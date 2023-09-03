@@ -22820,6 +22820,14 @@ var routes = [//panel
   props: true,
   params: true
 }, {
+  path: "/panel/priority/products",
+  component: function component() {
+    return __webpack_require__.e(/*! import() | productPriority */ "productPriority").then(__webpack_require__.bind(__webpack_require__, /*! ./components/panel/product/ProductsPriority */ "./resources/js/components/panel/product/ProductsPriority.vue"));
+  },
+  name: "productPriority",
+  params: true,
+  props: true
+}, {
   path: "/panel/products",
   component: function component() {
     return __webpack_require__.e(/*! import() | productAllData */ "blogAllData").then(__webpack_require__.bind(__webpack_require__, /*! ./components/panel/allData */ "./resources/js/components/panel/allData.vue"));
@@ -46574,7 +46582,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
 /******/ 			if (chunkId === "home") return "js/home.js";
-/******/ 			if ({"Categories":1,"blogAllData":1,"ProductCreate":1,"ProductEdit":1,"Product":1,"OrderCreate":1,"OrderEdit":1,"Order":1,"ArticleCreate":1,"ArticleEdit":1,"Article":1,"Slides":1,"FoodSlideCreate":1,"FoodSlideEdit":1,"BlogCreate":1,"BlogEdit":1,"TeaserCreate":1,"TeaserEdit":1,"Teaser":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"Categories":1,"productPriority":1,"blogAllData":1,"ProductCreate":1,"ProductEdit":1,"Product":1,"OrderCreate":1,"OrderEdit":1,"Order":1,"ArticleCreate":1,"ArticleEdit":1,"Article":1,"Slides":1,"FoodSlideCreate":1,"FoodSlideEdit":1,"BlogCreate":1,"BlogEdit":1,"TeaserCreate":1,"TeaserEdit":1,"Teaser":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			if (chunkId === "Blog") return "js/Blog.js";
 /******/ 			if (chunkId === "User") return "js/User.js";
 /******/ 			// return url for filenames based on template
