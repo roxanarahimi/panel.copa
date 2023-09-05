@@ -218,6 +218,7 @@ __webpack_require__.r(__webpack_exports__);
           product_category_id: document.getElementById('category').value,
           text: document.getElementById('text').value,
           color: document.getElementById('color').value,
+          index: document.getElementById('index').value,
           // features: features,
           link: document.getElementById('link').value,
           related_products: selectedProducts
@@ -279,6 +280,9 @@ __webpack_require__.r(__webpack_exports__);
       this.data.flavor_en = document.getElementById('flavor_en').value;
       this.data.text = document.getElementById('text').value;
       this.data.product_category_id = document.getElementById('category').value;
+      this.data.color = document.getElementById('color').value;
+      this.data.index = document.getElementById('index').value;
+      this.data.link = document.getElementById('link').value;
     },
     watchTextAreas: function watchTextAreas() {
       var txt = document.querySelector("#text");
@@ -505,7 +509,7 @@ var _hoisted_27 = {
   "class": "form-text error m-0"
 };
 var _hoisted_28 = {
-  "class": "col-md-6 mb-3"
+  "class": "col-md-3 mb-3"
 };
 
 var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
@@ -528,20 +532,20 @@ var _hoisted_32 = {
   "class": "form-text error m-0"
 };
 var _hoisted_33 = {
-  "class": "col-md-4 col-lg-4 mb-3"
+  "class": "col-md-3 mb-3"
 };
 
 var _hoisted_34 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "flavor",
+  "for": "index",
   "class": "form-label"
-}, "باطعم", -1
+}, "اولویت نمایش(0 بیشترین اولویت)", -1
 /* HOISTED */
 );
 
 var _hoisted_35 = ["value"];
 
 var _hoisted_36 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  id: "flavorHelp",
+  id: "indexHelp",
   "class": "form-text error"
 }, null, -1
 /* HOISTED */
@@ -555,16 +559,16 @@ var _hoisted_38 = {
 };
 
 var _hoisted_39 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "flavor_en",
+  "for": "flavor",
   "class": "form-label"
-}, "باطعم انگلیسی", -1
+}, "باطعم", -1
 /* HOISTED */
 );
 
 var _hoisted_40 = ["value"];
 
 var _hoisted_41 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  id: "flavor_enHelp",
+  id: "flavorHelp",
   "class": "form-text error"
 }, null, -1
 /* HOISTED */
@@ -578,86 +582,109 @@ var _hoisted_43 = {
 };
 
 var _hoisted_44 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "flavor_en",
+  "class": "form-label"
+}, "باطعم انگلیسی", -1
+/* HOISTED */
+);
+
+var _hoisted_45 = ["value"];
+
+var _hoisted_46 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  id: "flavor_enHelp",
+  "class": "form-text error"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_47 = {
+  "class": "form-text error m-0"
+};
+var _hoisted_48 = {
+  "class": "col-md-4 col-lg-4 mb-3"
+};
+
+var _hoisted_49 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "category",
   "class": "form-label"
 }, "دسته", -1
 /* HOISTED */
 );
 
-var _hoisted_45 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+var _hoisted_50 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
   value: ""
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_46 = ["selected", "value"];
+var _hoisted_51 = ["selected", "value"];
 
-var _hoisted_47 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_52 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   id: "categoryHelp",
   "class": "form-text error"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_48 = {
+var _hoisted_53 = {
   "class": "col-md-12 col-lg-12 mb-3"
 };
 
-var _hoisted_49 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_54 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "class": "form-label"
 }, "محصولات مرتبط", -1
 /* HOISTED */
 );
 
-var _hoisted_50 = {
+var _hoisted_55 = {
   "class": "col-md-12 col-lg-12 mb-3"
 };
 
-var _hoisted_51 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_56 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "link",
   "class": "form-label"
 }, "لینک خرید", -1
 /* HOISTED */
 );
 
-var _hoisted_52 = ["value"];
+var _hoisted_57 = ["value"];
 
-var _hoisted_53 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_58 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   id: "linkHelp",
   "class": "form-text error"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_54 = {
+var _hoisted_59 = {
   "class": "form-text error m-0"
 };
-var _hoisted_55 = {
+var _hoisted_60 = {
   "class": "col-md-12 mb-3"
 };
 
-var _hoisted_56 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_61 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "class": "form-label",
   "for": "text"
 }, "متن", -1
 /* HOISTED */
 );
 
-var _hoisted_57 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_62 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   id: "textHelp",
   "class": "form-text error"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_58 = {
+var _hoisted_63 = {
   "class": "form-text error m-0"
 };
-var _hoisted_59 = {
+var _hoisted_64 = {
   "class": "col-md-12 mb-3"
 };
 
-var _hoisted_60 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" ویرایش ");
+var _hoisted_65 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" ویرایش ");
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_image_cropper = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("image-cropper");
@@ -722,6 +749,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       }), 256
       /* UNKEYED_FRAGMENT */
       ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [_hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+        onInput: _cache[2] || (_cache[2] = function () {
+          return $options.updateData && $options.updateData.apply($options, arguments);
+        }),
         type: "text",
         value: $data.data.subTitle,
         "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
@@ -729,8 +759,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         }, "form-control"]),
         id: "subTitle",
         "aria-describedby": "subTitleHelp"
-      }, null, 10
-      /* CLASS, PROPS */
+      }, null, 42
+      /* CLASS, PROPS, HYDRATE_EVENTS */
       , _hoisted_25), _hoisted_26, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors.subTitle, function (e) {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(e), 1
         /* TEXT */
@@ -738,6 +768,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       }), 256
       /* UNKEYED_FRAGMENT */
       ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [_hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+        onInput: _cache[3] || (_cache[3] = function () {
+          return $options.updateData && $options.updateData.apply($options, arguments);
+        }),
         type: "text",
         value: $data.data.color,
         "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
@@ -745,16 +778,35 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         }, "form-control en"]),
         id: "color",
         "aria-describedby": "colorHelp"
-      }, null, 10
-      /* CLASS, PROPS */
+      }, null, 42
+      /* CLASS, PROPS, HYDRATE_EVENTS */
       , _hoisted_30), _hoisted_31, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors.color, function (e) {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_32, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(e), 1
         /* TEXT */
         );
       }), 256
       /* UNKEYED_FRAGMENT */
-      ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <div class=\"col-md-4 col-lg-4 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <label for=\"subTitle\" class=\"form-label\">زیرنویس انگلیسی</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <input @input=\"updateData\" type=\"text\" :class=\"{hasError: errors.subTitle}\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                               :value=\"data.subTitle\" class=\"en form-control text-start\" id=\"subTitle\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                               required>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <div id=\"subTitleHelp\" class=\"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <p class=\"form-text error m-0\" v-for=\"e in errors.subTitle\">{{ e }}</p>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [_hoisted_34, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-        onInput: _cache[2] || (_cache[2] = function () {
+      ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [_hoisted_34, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+        onInput: _cache[4] || (_cache[4] = function () {
+          return $options.updateData && $options.updateData.apply($options, arguments);
+        }),
+        type: "text",
+        value: $data.data.index,
+        "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
+          hasError: $data.errors.index
+        }, "form-control en"]),
+        id: "index",
+        "aria-describedby": "indexHelp"
+      }, null, 42
+      /* CLASS, PROPS, HYDRATE_EVENTS */
+      , _hoisted_35), _hoisted_36, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors.index, function (e) {
+        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_37, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(e), 1
+        /* TEXT */
+        );
+      }), 256
+      /* UNKEYED_FRAGMENT */
+      ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <div class=\"col-md-4 col-lg-4 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <label for=\"subTitle\" class=\"form-label\">زیرنویس انگلیسی</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <input @input=\"updateData\" type=\"text\" :class=\"{hasError: errors.subTitle}\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                               :value=\"data.subTitle\" class=\"en form-control text-start\" id=\"subTitle\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                               required>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <div id=\"subTitleHelp\" class=\"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <p class=\"form-text error m-0\" v-for=\"e in errors.subTitle\">{{ e }}</p>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [_hoisted_39, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+        onInput: _cache[5] || (_cache[5] = function () {
           return $options.updateData && $options.updateData.apply($options, arguments);
         }),
         type: "text",
@@ -765,14 +817,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         id: "flavor"
       }, null, 42
       /* CLASS, PROPS, HYDRATE_EVENTS */
-      , _hoisted_35), _hoisted_36, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors.flavor, function (e) {
-        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_37, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(e), 1
+      , _hoisted_40), _hoisted_41, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors.flavor, function (e) {
+        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_42, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(e), 1
         /* TEXT */
         );
       }), 256
       /* UNKEYED_FRAGMENT */
-      ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [_hoisted_39, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-        onInput: _cache[3] || (_cache[3] = function () {
+      ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_43, [_hoisted_44, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+        onInput: _cache[6] || (_cache[6] = function () {
           return $options.updateData && $options.updateData.apply($options, arguments);
         }),
         type: "text",
@@ -783,35 +835,35 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         id: "flavor_en"
       }, null, 42
       /* CLASS, PROPS, HYDRATE_EVENTS */
-      , _hoisted_40), _hoisted_41, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors.flavor_en, function (e) {
-        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_42, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(e), 1
+      , _hoisted_45), _hoisted_46, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors.flavor_en, function (e) {
+        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_47, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(e), 1
         /* TEXT */
         );
       }), 256
       /* UNKEYED_FRAGMENT */
-      ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_43, [_hoisted_44, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
-        onChange: _cache[4] || (_cache[4] = function () {
+      ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_48, [_hoisted_49, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+        onChange: _cache[7] || (_cache[7] = function () {
           return $options.updateData && $options.updateData.apply($options, arguments);
         }),
         "class": "form-select",
         id: "category",
         "aria-describedby": "categoryHelp",
         "aria-label": "category"
-      }, [_hoisted_45, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.categories, function (category) {
+      }, [_hoisted_50, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.categories, function (category) {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
           selected: $data.data.category.id == category.id,
           key: category.id,
           value: category.id
         }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(category.title), 9
         /* TEXT, PROPS */
-        , _hoisted_46);
+        , _hoisted_51);
       }), 128
       /* KEYED_FRAGMENT */
       ))], 32
       /* HYDRATE_EVENTS */
-      ), _hoisted_47]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <div class=\"col-md-4 col-lg-4 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <label for=\"tag1\" class=\"form-label\">تگ 1</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <input @input=\"updateData\" type=\"text\" :class=\"{hasError: errors.tag1}\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                               class=\"form-control\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                               id=\"tag1\" :value=\"data.tag1\" aria-describedby=\"tag1Help\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <div id=\"tag1Help\" class=\"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <p class=\"form-text error m-0\" v-for=\"e in errors.tag1\">{{ e }}</p>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <div class=\"col-md-4 col-lg-4 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <label for=\"tag2\" class=\"form-label\">تگ 2</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <input @input=\"updateData\" type=\"text\" :class=\"{hasError: errors.tag2}\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                               :value=\"data.tag2\" class=\"form-control text-start\" id=\"tag2\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <div id=\"tag2Help\" class=\"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <p class=\"form-text error m-0\" v-for=\"e in errors.tag2\">{{ e }}</p>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_48, [_hoisted_49, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Multiselect, {
+      ), _hoisted_52]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <div class=\"col-md-4 col-lg-4 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <label for=\"tag1\" class=\"form-label\">تگ 1</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <input @input=\"updateData\" type=\"text\" :class=\"{hasError: errors.tag1}\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                               class=\"form-control\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                               id=\"tag1\" :value=\"data.tag1\" aria-describedby=\"tag1Help\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <div id=\"tag1Help\" class=\"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <p class=\"form-text error m-0\" v-for=\"e in errors.tag1\">{{ e }}</p>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <div class=\"col-md-4 col-lg-4 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <label for=\"tag2\" class=\"form-label\">تگ 2</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <input @input=\"updateData\" type=\"text\" :class=\"{hasError: errors.tag2}\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                               :value=\"data.tag2\" class=\"form-control text-start\" id=\"tag2\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <div id=\"tag2Help\" class=\"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <p class=\"form-text error m-0\" v-for=\"e in errors.tag2\">{{ e }}</p>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_53, [_hoisted_54, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Multiselect, {
         modelValue: $data.value,
-        "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
+        "onUpdate:modelValue": _cache[8] || (_cache[8] = function ($event) {
           return $data.value = $event;
         }),
         mode: 'tags',
@@ -822,7 +874,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         "create-option": true
       }, null, 8
       /* PROPS */
-      , ["modelValue", "options"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_50, [_hoisted_51, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      , ["modelValue", "options"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_55, [_hoisted_56, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
         type: "text",
         "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
           hasError: $data.errors.link
@@ -831,14 +883,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         id: "link"
       }, null, 10
       /* CLASS, PROPS */
-      , _hoisted_52), _hoisted_53, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors.link, function (e) {
-        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_54, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(e), 1
+      , _hoisted_57), _hoisted_58, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors.link, function (e) {
+        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_59, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(e), 1
         /* TEXT */
         );
       }), 256
       /* UNKEYED_FRAGMENT */
-      ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <div class=\"col-md-12 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <label class=\"form-label\" for=\"ingredients\">ترکیبات</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <textarea @input=\"watchTextAreas\" :class=\"{hasError: errors.ingredients}\" aria-describedby=\"ingredientsHelp\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                  class=\"form-control text-start\" id=\"ingredients\">{{ data.ingredients}}</textarea>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <div id=\"ingredientsHelp\" class=\"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <p class=\"form-text error m-0\" v-for=\"e in errors.ingredients\">{{ e }}</p>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_55, [_hoisted_56, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
-        onInput: _cache[6] || (_cache[6] = function () {
+      ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <div class=\"col-md-12 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <label class=\"form-label\" for=\"ingredients\">ترکیبات</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <textarea @input=\"watchTextAreas\" :class=\"{hasError: errors.ingredients}\" aria-describedby=\"ingredientsHelp\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                  class=\"form-control text-start\" id=\"ingredients\">{{ data.ingredients}}</textarea>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <div id=\"ingredientsHelp\" class=\"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <p class=\"form-text error m-0\" v-for=\"e in errors.ingredients\">{{ e }}</p>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_60, [_hoisted_61, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
+        onInput: _cache[9] || (_cache[9] = function () {
           return $options.watchTextAreas && $options.watchTextAreas.apply($options, arguments);
         }),
         "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
@@ -848,17 +900,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         id: "text"
       }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.data.text), 35
       /* TEXT, CLASS, HYDRATE_EVENTS */
-      ), _hoisted_57, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors.text, function (e) {
-        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_58, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(e), 1
+      ), _hoisted_62, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors.text, function (e) {
+        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_63, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(e), 1
         /* TEXT */
         );
       }), 256
       /* UNKEYED_FRAGMENT */
-      ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <div class=\"col-md-12 mb-3\" id=\"features\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <label class=\"form-label mb-1 align-middle\">ارزش غذایی</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <span @click=\"addFeature\" class=\"px-3 d-inline-block align-middle\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <i class=\"bi bi-plus-circle-fill p-0 mt-2 m-0\" style=\"font-size: 15px\"></i>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            </span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <div v-for=\"(item, index) in features\" :key=\"index\" class=\"row tagElement\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <div class=\"col-4 col-md-3 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <input type=\"text\" name=\"featureLabel\" class=\"form-control\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       @input=\"updateFeatures\" :value=\"item.label\" placeholder=\"عنوان\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       required>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <div class=\"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <div class=\"col-3 col-md-3 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <input type=\"text\" name=\"featureValue\" class=\"form-control\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       @input=\"updateFeatures\" :value=\"item.value\" placeholder=\"مقدار\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       required>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <div class=\"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <div class=\"col-4 col-md-3 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <input type=\"text\" name=\"featureUnit\" class=\"form-control\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       @input=\"updateFeatures\" :value=\"item.unit\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       placeholder=\"واحد اندازه گیری\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       required>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <div class=\"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <div class=\"col-auto mb-3 pt-2\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <span @click=\"removeFeature(index)\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                    <i class=\"bi bi-x-circle-fill m-0 \" style=\"font-size: 15px\"></i>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                </span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_59, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BtnSubmit, {
+      ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <div class=\"col-md-12 mb-3\" id=\"features\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <label class=\"form-label mb-1 align-middle\">ارزش غذایی</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <span @click=\"addFeature\" class=\"px-3 d-inline-block align-middle\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <i class=\"bi bi-plus-circle-fill p-0 mt-2 m-0\" style=\"font-size: 15px\"></i>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            </span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <div v-for=\"(item, index) in features\" :key=\"index\" class=\"row tagElement\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <div class=\"col-4 col-md-3 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <input type=\"text\" name=\"featureLabel\" class=\"form-control\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       @input=\"updateFeatures\" :value=\"item.label\" placeholder=\"عنوان\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       required>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <div class=\"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <div class=\"col-3 col-md-3 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <input type=\"text\" name=\"featureValue\" class=\"form-control\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       @input=\"updateFeatures\" :value=\"item.value\" placeholder=\"مقدار\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       required>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <div class=\"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <div class=\"col-4 col-md-3 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <input type=\"text\" name=\"featureUnit\" class=\"form-control\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       @input=\"updateFeatures\" :value=\"item.unit\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       placeholder=\"واحد اندازه گیری\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                       required>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <div class=\"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <div class=\"col-auto mb-3 pt-2\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <span @click=\"removeFeature(index)\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                    <i class=\"bi bi-x-circle-fill m-0 \" style=\"font-size: 15px\"></i>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                </span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_64, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BtnSubmit, {
         onClick: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)($options.updateInfo, ["prevent"])
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-          return [_hoisted_60];
+          return [_hoisted_65];
         }),
         _: 1
         /* STABLE */

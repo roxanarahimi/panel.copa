@@ -39,17 +39,24 @@
 
                                     <div class="col-md-6 mb-3">
                                         <label for="subTitle" class="form-label">زیرنویس</label>
-                                        <input type="text" :value="data.subTitle" :class="{hasError: errors.subTitle}" class="form-control"
+                                        <input @input="updateData" type="text" :value="data.subTitle" :class="{hasError: errors.subTitle}" class="form-control"
                                                id="subTitle" aria-describedby="subTitleHelp" >
                                         <div id="subTitleHelp" class="form-text error"></div>
                                         <p class="form-text error m-0" v-for="e in errors.subTitle">{{ e }}</p>
                                     </div>
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-3 mb-3">
                                         <label for="color" class="form-label">رنگ</label>
-                                        <input type="text" :value="data.color" :class="{hasError: errors.color}" class="form-control en"
+                                        <input @input="updateData" type="text" :value="data.color" :class="{hasError: errors.color}" class="form-control en"
                                                id="color" aria-describedby="colorHelp">
                                         <div id="colorHelp" class="form-text error"></div>
                                         <p class="form-text error m-0" v-for="e in errors.color">{{ e }}</p>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="index" class="form-label">اولویت نمایش(0 بیشترین اولویت)</label>
+                                        <input @input="updateData" type="text" :value="data.index" :class="{hasError: errors.index}" class="form-control en"
+                                               id="index" aria-describedby="indexHelp">
+                                        <div id="indexHelp" class="form-text error"></div>
+                                        <p class="form-text error m-0" v-for="e in errors.index">{{ e }}</p>
                                     </div>
                                     <!--                                    <div class="col-md-4 col-lg-4 mb-3">-->
 <!--                                        <label for="subTitle" class="form-label">زیرنویس انگلیسی</label>-->
@@ -332,6 +339,7 @@ export default {
                         product_category_id: document.getElementById('category').value,
                         text: document.getElementById('text').value,
                         color: document.getElementById('color').value,
+                        index: document.getElementById('index').value,
                         // features: features,
                         link: document.getElementById('link').value,
                         related_products: selectedProducts,
@@ -397,6 +405,9 @@ export default {
             this.data.flavor_en = document.getElementById('flavor_en').value;
             this.data.text = document.getElementById('text').value;
             this.data.product_category_id = document.getElementById('category').value;
+            this.data.color = document.getElementById('color').value;
+            this.data.index = document.getElementById('index').value;
+            this.data.link = document.getElementById('link').value;
         },
         watchTextAreas() {
             let txt = document.querySelector("#text");
