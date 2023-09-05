@@ -21,7 +21,7 @@ class ProductController extends Controller
     {
         try {
             $perPage = $request['perPage'];
-            $data = Product::orderBy('index')->where('title', 'Like', '%' . $request['search'] . '%')->paginate($perPage);
+            $data = Product::orderBy('index')->orderByDesc('id')->where('title', 'Like', '%' . $request['search'] . '%')->paginate($perPage);
             $pages_count = ceil($data->total()/$perPage);
             $labels = [];
             for ($i=1; $i <= $pages_count; $i++){
@@ -56,7 +56,7 @@ class ProductController extends Controller
     {
         // dd($request->all());
         try {
-            $data = Product::orderBy('index')->whereHas('activeCategory')->with('category')->where('active', 1);
+            $data = Product::orderBy('index')->orderByDesc('id')->whereHas('activeCategory')->with('category')->where('active', 1);
             if ($request['cat'] != '') {
                 $data = $data->where('product_category_id', $request['cat']);
             }
