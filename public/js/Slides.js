@@ -4327,7 +4327,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Slides_vue_vue_type_template_id_e630c554__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Slides.vue?vue&type=template&id=e630c554 */ "./resources/js/components/panel/slide/Slides.vue?vue&type=template&id=e630c554");
 /* harmony import */ var _Slides_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Slides.vue?vue&type=script&lang=js */ "./resources/js/components/panel/slide/Slides.vue?vue&type=script&lang=js");
 /* harmony import */ var _Slides_vue_vue_type_style_index_0_id_e630c554_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Slides.vue?vue&type=style&index=0&id=e630c554&lang=css */ "./resources/js/components/panel/slide/Slides.vue?vue&type=style&index=0&id=e630c554&lang=css");
-/* harmony import */ var F_PROJECTS_2023_copa_panel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var F_PROJECTS_2023_asal_panel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -4335,7 +4335,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,F_PROJECTS_2023_copa_panel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Slides_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Slides_vue_vue_type_template_id_e630c554__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/panel/slide/Slides.vue"]])
+const __exports__ = /*#__PURE__*/(0,F_PROJECTS_2023_asal_panel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Slides_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Slides_vue_vue_type_template_id_e630c554__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/panel/slide/Slides.vue"]])
 /* hot reload */
 if (false) {}
 

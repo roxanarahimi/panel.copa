@@ -8,12 +8,12 @@
                     <span :title="tooltip_new" class="px-3 d-inline-block align-middle"><i
                         class="bi bi-plus-circle-fill p-0 mt-2 m-0" style="font-size: 15px"></i></span>
       </router-link>
-        <router-link v-if="this.$route.name == 'productAllData'" to="/panel/priority/products">
-            <span  class=" d-inline-block align-middle bg-dark text-light rounded rounded-circle py-1 text-center"
-                           style="width: 16px !important; height: 16px !important; overflow: hidden !important" title="اولویت">
-            <i style="font-size: 10px !important; line-height: 10px; margin-top: -20px !important; " class="align-top bi bi-arrow-down-up m-0"></i>
-        </span>
-        </router-link>
+<!--        <router-link v-if="this.$route.name == 'productAllData'" to="/panel/priority/products">-->
+<!--            <span  class=" d-inline-block align-middle bg-dark text-light rounded rounded-circle py-1 text-center"-->
+<!--                           style="width: 16px !important; height: 16px !important; overflow: hidden !important" title="اولویت">-->
+<!--            <i style="font-size: 10px !important; line-height: 10px; margin-top: -20px !important; " class="align-top bi bi-arrow-down-up m-0"></i>-->
+<!--        </span>-->
+<!--        </router-link>-->
     </h3>
 
     <loader/>

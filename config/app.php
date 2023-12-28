@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'debug' => (bool) env('APP_DEBUG', false),
+    'debug' => (bool)env('APP_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -174,9 +174,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Kavenegar\Laravel\ServiceProvider::class,
         Artisaninweb\SoapWrapper\ServiceProvider::class,
-
+        Kavenegar\Laravel\ServiceProvider::class,
     ],
 
     /*
@@ -231,10 +230,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Kavenegar' => Kavenegar\Laravel\Facade::class,
         'SoapWrapper' => Artisaninweb\SoapWrapper\Facade\SoapWrapper::class,
-        'Zarinpal' =>Zarinpal\Laravel\ZarinpalServiceProvider::class
-
+        'Zarinpal' => Zarinpal\Laravel\ZarinpalServiceProvider::class,
+        'Kavenegar' => Kavenegar\Laravel\Facade::class,
     ],
 
 ];

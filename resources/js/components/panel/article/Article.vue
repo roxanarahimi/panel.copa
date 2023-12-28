@@ -14,7 +14,7 @@
             <h3 class="mb-2 fw-bold d-inline-block ">{{ data.title }}</h3>
 
             <router-link :to="'/panel/edit/article/'+data.id" class="text-dark">
-                <span title="ویرایش دستور پخت"
+                <span title="ویرایش مطلب"
                       class="mx-3 p-2 d-inline-block align-middle bg-dark text-light rounded-circle">
                     <i class="bi bi-pencil p-0 edit-pen"></i>
                 </span>
