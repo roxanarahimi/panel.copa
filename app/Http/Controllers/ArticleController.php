@@ -25,8 +25,8 @@ class ArticleController extends Controller
                 "pages" => $pages_count,
                 "total" => $data->total(),
                 "labels" => $labels,
-                "title" => 'دستور پخت ها',
-                "tooltip_new" => 'ثبت دستور پخت جدید',
+                "title" => 'مطالب',
+                "tooltip_new" => 'ثبت مطلب جدید',
 
             ], 200);
         } catch (\Exception $exception) {

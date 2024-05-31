@@ -1,7 +1,7 @@
 <template>
     <transition name="route" mode="out-in" appear>
         <section>
-            <h3 class="mb-5">ویرایش دستور پخت</h3>
+            <h3 class="mb-5">ویرایش مطلب</h3>
 
             <div class="row mt-3">
                 <div class="col-12 mb-3">
