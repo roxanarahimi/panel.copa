@@ -21,8 +21,8 @@ class ArticleCategoryResource extends JsonResource
             "image" => $this->image,
             "thumb" => $thumb,
             "active" => (boolean)$this->active,
-            "editor" => ProductResource::collection($this->articles),
-            "subsets" => ProductResource::collection($this->articles),
+//            "editor" => ProductResource::collection($this->articles),
+            "subsets" => ArticleResource::collection($this->articles),
             "created_at" => date('Y-m-d', strtotime($this->created_at)),
             "updated_at" => date('Y-m-d', strtotime($this->updated_at)),
         ];
