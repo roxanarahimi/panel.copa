@@ -37,13 +37,13 @@
                             <span class="sidebar_title">داشبورد</span>
                         </router-link>
                     </li>
-                    <li>
-                        <router-link to="/panel/orders" class="nav-link text-white"
-                                     :class="{active: $route.fullPath ==='/panel/orders'}">
-                            <i title="سفارش ها" class="bi bi-box2-heart-fill me-2"></i>
-                            <span class="sidebar_title">سفارش ها</span>
-                        </router-link>
-                    </li>
+<!--                    <li>-->
+<!--                        <router-link to="/panel/orders" class="nav-link text-white"-->
+<!--                                     :class="{active: $route.fullPath ==='/panel/orders'}">-->
+<!--                            <i title="سفارش ها" class="bi bi-box2-heart-fill me-2"></i>-->
+<!--                            <span class="sidebar_title">سفارش ها</span>-->
+<!--                        </router-link>-->
+<!--                    </li>-->
                     <li>
                         <router-link to="/panel/categories" class="nav-link text-white"
                                      :class="{active: $route.fullPath ==='/panel/categories'}">

@@ -36,33 +36,34 @@
   <!--    </transition>-->
 </template>
 <script>
-import {ref, onMounted, onUpdated, onUnmounted} from 'vue';
+import {ref, onMounted, onUpdated} from 'vue';
+import {useRoute} from "vue-router";
 import Loader from "../components/Loader";
 import AllDataContainer from "./AllDataContainer";
 import Pagination from "../components/Pagination";
 
 import productsTable from "./product/productsTable";
-import ordersTable from "./order/ordersTable";
-import projectsTable from "./project/projectsTable";
 import articlesTable from "./article/articlesTable";
 import usersTable from "./user/usersTable";
 import adminsTable from "./admin/adminsTable";
-import coursesTable from "./course/coursesTable";
-import teachersTable from "./teacher/teachersTable";
+
 import financesTable from "./finance/financesTable";
 import resumesTable from "./employ/resumesTable";
-import foodSlidesTable from "./foodSlide/foodSlidesTable";
 import blogsTable from "./blog/blogsTable";
 import teasersTable from "./teaser/teasersTable";
-import {useRoute} from "vue-router";
 
+// import ordersTable from "./order/ordersTable";
+// import projectsTable from "./project/projectsTable";
+// import coursesTable from "./course/coursesTable";
+// import teachersTable from "./teacher/teachersTable";
+// import foodSlidesTable from "./foodSlide/foodSlidesTable";
 
 export default {
   components: {
     Loader, AllDataContainer, Pagination,
-    productsTable, ordersTable, usersTable, articlesTable, coursesTable,
-    adminsTable, projectsTable, teachersTable, financesTable, resumesTable,
-    foodSlidesTable, blogsTable, teasersTable
+    productsTable, usersTable, articlesTable,
+    adminsTable,  financesTable, resumesTable,blogsTable, teasersTable,
+      // projectsTable, teachersTable, coursesTable, foodSlidesTable,ordersTable
   },
   setup() {
     const model = ref();
