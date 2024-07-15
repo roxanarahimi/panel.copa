@@ -6,7 +6,8 @@
                 <h3 class="me-2">دسته بندی</h3>
                 <select id="model" @change="loadData" v-model="model" class="form-select" style="width: 200px">
                     <option value="product">محصولات</option>
-                    <option value="articles">مطالب</option>
+                    <option value="articles">دستور پخت ها</option>
+<!--                    <option value="blogs">مطالب</option>-->
                 </select>
             </div>
             <!--            <div class="row flex-row-reverse ">-->
