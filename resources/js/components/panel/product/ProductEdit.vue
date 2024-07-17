@@ -151,50 +151,53 @@
                                         <p class="form-text error m-0" v-for="e in errors.text">{{ e }}</p>
 
                                     </div>
-<!--                                    <div class="col-md-12 mb-3" id="features">-->
-<!--                                        <div>-->
-<!--                                            <label class="form-label mb-1 align-middle">ارزش غذایی</label>-->
-<!--                                            <span @click="addFeature" class="px-3 d-inline-block align-middle">-->
-<!--                                                <i class="bi bi-plus-circle-fill p-0 mt-2 m-0" style="font-size: 15px"></i>-->
-<!--                                            </span>-->
-<!--                                        </div>-->
+                                    <!--      ******************************************** زبان عربی ************************************     -->
+                                    <div class="row">
+                                        <div class="col-md-12 col-xl-6 mb-3">
+                                            <label for="title_ar" class="form-label">عنوان عربی</label>
+                                            <input type="text" :class="{hasError: errors.title_ar}" class="form-control" id="title_ar"
+                                                   :value="data.title_ar"  aria-describedby="title_arHelp">
+                                            <div id="title_arHelp" class="form-text error"></div>
+                                            <p class="form-text error m-0" v-for="e in errors.title_ar">{{ e }}</p>
+                                        </div>
 
-<!--                                        <div v-for="(item, index) in features" :key="index" class="row tagElement">-->
-<!--                                            <div class="col-4 col-md-3 mb-3">-->
-<!--                                                <input type="text" name="featureLabel" class="form-control"-->
-<!--                                                       @input="updateFeatures" :value="item.label" placeholder="عنوان"-->
-<!--                                                       required>-->
-<!--                                                <div class="form-text error"></div>-->
-<!--                                            </div>-->
-<!--                                            <div class="col-3 col-md-3 mb-3">-->
-<!--                                                <input type="text" name="featureValue" class="form-control"-->
-<!--                                                       @input="updateFeatures" :value="item.value" placeholder="مقدار"-->
-<!--                                                       required>-->
-<!--                                                <div class="form-text error"></div>-->
-<!--                                            </div>-->
-<!--                                            <div class="col-4 col-md-3 mb-3">-->
-<!--                                                <input type="text" name="featureUnit" class="form-control"-->
-<!--                                                       @input="updateFeatures" :value="item.unit"-->
-<!--                                                       placeholder="واحد اندازه گیری"-->
-<!--                                                       required>-->
-<!--                                                <div class="form-text error"></div>-->
-<!--                                            </div>-->
-<!--                                            <div class="col-auto mb-3 pt-2">-->
-<!--                                                <span @click="removeFeature(index)">-->
-<!--                                                    <i class="bi bi-x-circle-fill m-0 " style="font-size: 15px"></i>-->
-<!--                                                </span>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
+                                        <div class="col-md-12 col-xl-6 mb-3">
+                                            <label for="flavor_ar" class="form-label">باطعم عربی</label>
+                                            <input type="text" :class="{hasError: errors.flavor_ar}"
+                                                   :value="data.flavor_ar"   class="en form-control text-start" id="flavor_ar">
+                                            <div id="flavor_arHelp" class="form-text error"></div>
+                                            <p class="form-text error m-0" v-for="e in errors.flavor_ar">{{ e }}</p>
+                                        </div>
 
-<!--                                    </div>-->
+                                    </div>
+
+                                    <div class="row">
+<!--                                        <div class="col-md-12 mb-3">-->
+<!--                                            <label class="form-label">ترکیبات</label>-->
+<!--                                            &lt;!&ndash;                                       <div id="editor"></div>&ndash;&gt;-->
+
+<!--                                            &lt;!&ndash;                                        <editor mode = "new" />&ndash;&gt;-->
+<!--                                            <textarea @input="watchTextAreas" :class="{hasError: errors.ingredients_ar}"-->
+<!--                                                      aria-describedby="ingredients_arHelp" class="form-control text-start"-->
+<!--                                                      id="ingredients_ar">{{ data.ingredients_ar }}</textarea>-->
+<!--                                            <div id="ingredients_arHelp" class="form-text error"></div>-->
+<!--                                            <p class="form-text error m-0" v-for="e in errors.ingredients_ar">{{ e }}</p>-->
+<!--                                        </div>-->
+                                        <div class="col-md-12 mb-3">
+                                            <label class="form-label">متن عربی</label>
+                                            <textarea @input="watchTextAreas" :class="{hasError: errors.text_ar}"
+                                                      aria-describedby="text_arHelp" class="form-control text-start"
+                                                      id="text_ar">{{ data.text_ar }}</textarea>
+                                            <div id="text_arHelp" class="form-text error"></div>
+                                            <p class="form-text error m-0" v-for="e in errors.text_ar">{{ e }}</p>
+                                        </div>
+                                    </div>
+                                    <!--*****************************************************************************************-->
 
                                     <div class="col-md-12 mb-3">
                                         <BtnSubmit @click.prevent="updateInfo">
                                             ویرایش
                                         </BtnSubmit>
-                                        <!--                                        <button id="submit" class="btn btn-primary d-flex justify-content-between" @click.prevent="updateInfo" type="submit">-->
-                                        <!--                                             ویرایش <loader-sm class="loader-sm d-none" />-->
-                                        <!--                                        </button>-->
                                     </div>
                                 </div>
 
@@ -343,6 +346,10 @@ export default {
                         // features: features,
                         link: document.getElementById('link').value,
                         related_products: selectedProducts,
+
+                        title_ar: document.getElementById('title_ar').value,
+                        flavor_ar: document.getElementById('flavor_ar').value,
+                        text_ar: document.getElementById('text_ar').value,
                     })
                     .then((response) => {
                         console.log('res', response);
