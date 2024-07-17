@@ -30,12 +30,17 @@ class ArticleResource extends JsonResource
             "thumb" => $thumb,
             "title" => $this->title,
             "title_en" => $this->title_en,
+            "title_ar" => $this->title_ar,
             "subTitle_en" => $this->subTitle_en,
             "products_en" => $this->products_en,
             "stock" => $this->stock,
             "active" => (boolean)$this->active,
             "ingredients" => $this->ingredients,
+            "ingredients_en" => $this->ingredients_en,
+            "ingredients_ar" => $this->ingredients_ar,
             "text" => $this->text,
+            "text_en" => $this->text_en,
+            "text_ar" => $this->text_ar,
 
 //            "product" => new ProductResource($this->product),
             "related_products" => $relatedProducts,
@@ -44,6 +49,8 @@ class ArticleResource extends JsonResource
             "category" => [
                 'id' => $this->category->id,
                 'title' => $this->category->title,
+                'title_en' => $this->category->title_en,
+                'title_ar' => $this->category->title_ar,
                 'active' => $this->category->active,
             ],
 //            "tag" => [
