@@ -80,10 +80,14 @@
                             <div class="card-body p-md-5">
                                 <h4>عنوان عربی</h4>
                                 <p>{{ data.title_ar }}</p>
-                                <h4 style="font-size: 18px;white-space: pre-line; text-align: right !important" class="mt-3">مواد لازم عربی</h4>
-                                <p>{{ data.ingredients_ar }}</p>
+                                <h4 class="mt-3">مواد لازم عربی</h4>
+                                <p style="font-size: 18px;white-space: pre-line !important; text-align: right !important" >
+                                    {{ data.ingredients_ar }}
+                                </p>
                                 <h4 class="mt-3">دستور پخت عربی</h4>
-                                <p>{{ data.text_ar }}</p>
+                                <p style="font-size: 18px;white-space: pre-line; text-align: right !important">
+                                    {{ data.text_ar }}
+                                </p>
 
                             </div>
                         </div>
