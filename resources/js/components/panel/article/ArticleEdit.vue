@@ -72,83 +72,11 @@
                                         <p class="form-text error m-0" v-for="e in errors.products_en">{{ e }}</p>
 
                                     </div>
-
-
-                                    <!--                                </div>-->
-
-                                    <!--                                <div class="row">-->
-                                    <!--                  <div class="col-md-4 col-xl-4 mb-3">-->
-                                    <!--                    <label for="category" class="form-label">دسته بندی محصول</label>-->
-                                    <!--                    <select @change="showProducts" class="form-select" id="productCategory"-->
-                                    <!--                            aria-describedby="categoryHelp" aria-label="category" required>-->
-                                    <!--                      <option value=""></option>-->
-                                    <!--                      &lt;!&ndash;                                            &ndash;&gt;-->
-                                    <!--                      <option :selected="data.product.category.id == Pcategory.id"-->
-                                    <!--                              v-for="Pcategory in productCategories" :key="Pcategory.id" :value="Pcategory.id">-->
-                                    <!--                        {{ Pcategory.title }}-->
-                                    <!--                      </option>-->
-                                    <!--                    </select>-->
-                                    <!--                    <div id="productCategoryHelp" class="form-text error"></div>-->
-                                    <!--                  </div>-->
-                                    <!--                  <div class="col-md-4 col-xl-4 mb-3">-->
-                                    <!--                    <label for="product_id" class="form-label">محصول</label>-->
-                                    <!--                    <select class="form-select" id="product_id" aria-describedby="productHelp" aria-label="product"-->
-                                    <!--                            required>-->
-                                    <!--                      &lt;!&ndash;                                          &ndash;&gt;-->
-                                    <!--                      <option :selected="data.product.id == product.id" v-for="product in products" :key="product.id"-->
-                                    <!--                              :value="product.id">-->
-                                    <!--                        {{ product.title }}-->
-                                    <!--                      </option>-->
-                                    <!--                    </select>-->
-                                    <!--                    <div id="productHelp" class="form-text error"></div>-->
-                                    <!--                  </div>-->
-                                    <!--                  <div class="col-md-4 col-xl-4 mb-3">-->
-                                    <!--                    <label for="article_tag_id" class="form-label">دستور پخت پیشنهادی</label>-->
-                                    <!--                    <select class="form-select" id="article_tag_id" aria-describedby="article_tag_idHelp"-->
-                                    <!--                            aria-label="article_tag_id" required>-->
-                                    <!--                      &lt;!&ndash;                                          &ndash;&gt;-->
-                                    <!--                      <option :selected="data.tag.id == article.id" v-for="article in articles"-->
-                                    <!--                              :key="article.id" :value="article.id">-->
-                                    <!--                        {{ article.title }}-->
-                                    <!--                      </option>-->
-                                    <!--                    </select>-->
-                                    <!--                    <div id="article_tag_idHelp" class="form-text error"></div>-->
-                                    <!--                  </div>-->
-
                                 </div>
-                                <!--                                <div class = "row">-->
-                                <!--                                    <div class = "col-12 mb-3">-->
-                                <!--                                        <label class = "form-label">تصویر محصول</label><br/>-->
-                                <!--                                        <image-cropper   :isPng="isPng" name = "product" caption = "" :hasCaption = "hasCaption" :isRequired = "imgRequired" :src="data.image2"/>-->
-                                <!--                                        <div id = "image2Help" class = "form-text error"></div>-->
-                                <!--                                    </div>-->
-                                <!--                                </div>-->
-                                <!--                                <div class = "row">-->
-                                <!--                                    <div class = "col-md-3 mb-3">-->
-                                <!--                                        <label for = "text2" class = "form-label">عنوان محصول</label>-->
-                                <!--                                        <input type = "text" :class = "{hasError: errors.text2}" class = "form-control" id = "text2" :value = "data.text2" aria-describedby = "text2Help" required>-->
-                                <!--                                        <div id = "text2Help" class = "form-text error"></div>-->
-                                <!--                                        <p class = "form-text error m-0" v-for = "e in errors.text2">{{ e }}</p>-->
-                                <!--                                    </div>-->
-                                <!--                                    <div class = "col-md-3 mb-3">-->
-                                <!--                                        <label for = "text3" class = "form-label">زیرنویس</label>-->
-                                <!--                                        <input type = "text" :class = "{hasError: errors.text3}" class = "form-control" id = "text3" :value = "data.text3" aria-describedby = "text3Help" required>-->
-                                <!--                                        <div id = "text3Help" class = "form-text error"></div>-->
-                                <!--                                        <p class = "form-text error m-0" v-for = "e in errors.text3">{{ e }}</p>-->
-                                <!--                                    </div>-->
-                                <!--                                    <div class = "col-md-3 mb-3">-->
-                                <!--                                        <label for = "text4" class = "form-label">با طعم</label>-->
-                                <!--                                        <input type = "text" :class = "{hasError: errors.text4}" class = "form-control" id = "text4" :value = "data.text4" aria-describedby = "text4Help" >-->
-                                <!--                                        <div id = "text4Help" class = "form-text error"></div>-->
-                                <!--                                        <p class = "form-text error m-0" v-for = "e in errors.text4">{{ e }}</p>-->
-                                <!--                                    </div>-->
-                                <!--                                </div>-->
+
                                 <div class="row">
                                     <div class="col-md-12 mb-3">
                                         <label class="form-label">مواد لازم</label>
-                                        <!--                                       <div id="editor"></div>-->
-
-                                        <!--                                        <editor mode = "new" />-->
                                         <textarea @input="watchTextAreas" :class="{hasError: errors.ingredients}"
                                                   aria-describedby="ingredientsHelp" class="form-control text-start"
                                                   id="ingredients">{{ data.ingredients }}</textarea>
@@ -179,13 +107,51 @@
                                         />
 
                                     </div>
+
+                                </div>
+                                <!--      ******************************************** زبان عربی ************************************     -->
+                                <div class="row">
+                                    <div class="col-md-12 col-xl-6 mb-3">
+                                        <label for="title_ar" class="form-label">عنوان عربی</label>
+                                        <input type="text" :class="{hasError: errors.title_ar}" class="form-control" id="title_ar"
+                                               :value="data.title_ar"  aria-describedby="title_arHelp">
+                                        <div id="title_arHelp" class="form-text error"></div>
+                                        <p class="form-text error m-0" v-for="e in errors.title_ar">{{ e }}</p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <label class="form-label">مواد لازم عربی</label>
+                                        <!--                                       <div id="editor"></div>-->
+
+                                        <!--                                        <editor mode = "new" />-->
+                                        <textarea @input="watchTextAreas" :class="{hasError: errors.ingredients_ar}"
+                                                  aria-describedby="ingredients_arHelp" class="form-control text-start"
+                                                  id="ingredients_ar">{{ data.ingredients_ar }}</textarea>
+                                        <div id="ingredients_arHelp" class="form-text error"></div>
+                                        <p class="form-text error m-0" v-for="e in errors.ingredients_ar">{{ e }}</p>
+                                    </div>
+                                    <div class="col-md-12 mb-3">
+                                        <label class="form-label">دستور پخت عربی</label>
+                                        <textarea @input="watchTextAreas" :class="{hasError: errors.text_ar}"
+                                                  aria-describedby="text_arHelp" class="form-control text-start"
+                                                  id="text_ar">{{ data.text_ar }}</textarea>
+                                        <div id="text_arHelp" class="form-text error"></div>
+                                        <p class="form-text error m-0" v-for="e in errors.text_ar">{{ e }}</p>
+                                    </div>
+                                </div>
+                                <!--*****************************************************************************************-->
+                                <div class="row">
                                     <div class="col-md-12 mb-3">
                                         <BtnSubmit @click.prevent="updateInfo">
                                             ویرایش
                                         </BtnSubmit>
                                     </div>
-                                </div>
 
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -326,14 +292,9 @@ export default {
                         text: document.getElementById('text').value,
                         related_products: selectedProducts,
 
-                        // product_id: document.getElementById('product_id').value,
-                        // article_tag_id: document.getElementById('article_tag_id').value,
-
-                        // image2: document.getElementById('Image_product_code').value,
-                        // text2:  document.getElementById('text2').value,
-                        // text3:  document.getElementById('text3').value,
-                        // text4:  document.getElementById('text4').value,
-                        // tags: tags,
+                        title_ar: document.getElementById('title_ar').value,
+                        ingredients_ar: document.getElementById('ingredients_ar').value,
+                        text_ar: document.getElementById('text_ar').value,
                     })
                     .then((response) => {
                         console.log(response)
@@ -394,22 +355,7 @@ export default {
                 this.style.height = (this.scrollHeight) + "px";
             }
         },
-        addTag() {
-            // this.tags.push('{"uri": "", "label": ""}');
-        },
-        removeTag(index) {
-            // this.tags.splice(index, 1)
-        },
-        updateTags() {
-            // this.tags = [];
-            // for (let i = 0; i < document.getElementsByName('tagLabel').length; i++) {
-            //     this.tags.push({
-            //         "label": document.getElementsByName('tagLabel')[i].value.toString(),
-            //         "uri": document.getElementsByName('tagUri')[i].value.toString()
-            //     });
-            // }
 
-        },
 
 
     }

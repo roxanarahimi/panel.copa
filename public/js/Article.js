@@ -190,16 +190,45 @@ var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 );
 
 var _hoisted_28 = {
+  "class": "row mt-3"
+};
+var _hoisted_29 = {
+  "class": "col-xxl-12 mb-5"
+};
+var _hoisted_30 = {
+  "class": "card h-100"
+};
+var _hoisted_31 = {
+  "class": "card-body p-md-5"
+};
+
+var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", null, "عنوان عربی", -1
+/* HOISTED */
+);
+
+var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", {
+  "class": "mt-3"
+}, "مواد لازم عربی", -1
+/* HOISTED */
+);
+
+var _hoisted_34 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", {
+  "class": "mt-3"
+}, "دستور پخت عربی", -1
+/* HOISTED */
+);
+
+var _hoisted_35 = {
   key: 1
 };
 
-var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_36 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "fw-bold"
 }, "این مطلب موجود نیست", -1
 /* HOISTED */
 );
 
-var _hoisted_30 = [_hoisted_29];
+var _hoisted_37 = [_hoisted_36];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
@@ -251,7 +280,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         );
       }), 128
       /* KEYED_FRAGMENT */
-      ))])])])])])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_28, _hoisted_30))];
+      ))])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [_hoisted_32, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.title_ar), 1
+      /* TEXT */
+      ), _hoisted_33, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.ingredients_ar), 1
+      /* TEXT */
+      ), _hoisted_34, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.text_ar), 1
+      /* TEXT */
+      )])])])])])])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_35, _hoisted_37))];
     }),
     _: 1
     /* STABLE */
@@ -277,7 +312,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n#content p {\r\n    text-align: justify !important;\r\n    line-height: 30px !important;\r\n    padding-left: 10px;\n}\n#content figure {\r\n    text-align: center !important;\r\n    display: block !important;\n}\n#content figure figcaption {\r\n    text-align: center !important;\n}\n.index_image .label {\r\n    display: block;\r\n    font-size: 20px;\r\n    margin: -50px 20px 50px 20px;\n}\n#content figure img {\r\n    max-width: 100%;\n}\n.edit-pen {\r\n    font-size: 12px;\r\n    margin: 0 6px !important;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#content p {\n    text-align: justify !important;\n    line-height: 30px !important;\n    padding-left: 10px;\n}\n#content figure {\n    text-align: center !important;\n    display: block !important;\n}\n#content figure figcaption {\n    text-align: center !important;\n}\n.index_image .label {\n    display: block;\n    font-size: 20px;\n    margin: -50px 20px 50px 20px;\n}\n#content figure img {\n    max-width: 100%;\n}\n.edit-pen {\n    font-size: 12px;\n    margin: 0 6px !important;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

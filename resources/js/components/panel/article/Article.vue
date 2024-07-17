@@ -26,9 +26,9 @@
                     <div class="card h-100">
                         <div class="card-body p-md-5  d-flex justify-content-between text-end">
 
-                            <p>{{ data.title_en}}</p>
-                            <p>{{ data.subTitle_en}}</p>
-                            <p>{{ data.products_en}}</p>
+                            <p>{{ data.title_en }}</p>
+                            <p>{{ data.subTitle_en }}</p>
+                            <p>{{ data.products_en }}</p>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,8 @@
                         <div class="card-body p-md-5">
                             <h3 class="mb-5">مواد لازم:</h3>
 
-                            <div style="font-size: 18px;white-space: pre-line; text-align: right !important" class="mb-5">{{ data.ingredients }}
+                            <div style="font-size: 18px;white-space: pre-line; text-align: right !important"
+                                 class="mb-5">{{ data.ingredients }}
                             </div>
 
                         </div>
@@ -69,6 +70,22 @@
                             <button v-for="item in data.related_products" :key="item.id"
                                     class="m-2 btn btn-sm btn-primary">{{ item.title }}
                             </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-xxl-12 mb-5 ">
+                        <div class="card h-100">
+                            <div class="card-body p-md-5">
+                                <h4>عنوان عربی</h4>
+                                <p>{{ data.title_ar }}</p>
+                                <h4 class="mt-3">مواد لازم عربی</h4>
+                                <p>{{ data.ingredients_ar }}</p>
+                                <h4 class="mt-3">دستور پخت عربی</h4>
+                                <p>{{ data.text_ar }}</p>
+
+                            </div>
                         </div>
                     </div>
                 </div>

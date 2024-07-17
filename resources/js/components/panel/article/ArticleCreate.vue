@@ -107,7 +107,6 @@
 
                                 </div>
 
-
                                 <div class="row">
                                     <div class="col-md-12 mb-3">
                                         <label class="form-label">مواد لازم</label>
@@ -144,13 +143,51 @@
                                         />
 
                                     </div>
+
+                                </div>
+
+<!--      ******************************************** زبان عربی ************************************     -->
+                                <div class="row">
+                                    <div class="col-md-12 col-xl-6 mb-3">
+                                        <label for="title_ar" class="form-label">عنوان عربی</label>
+                                        <input type="text" :class="{hasError: errors.title_ar}" class="form-control" id="title_ar"
+                                               aria-describedby="title_arHelp">
+                                        <div id="title_arHelp" class="form-text error"></div>
+                                        <p class="form-text error m-0" v-for="e in errors.title_ar">{{ e }}</p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <label class="form-label">مواد لازم عربی</label>
+                                        <!--                                       <div id="editor"></div>-->
+
+                                        <!--                                        <editor mode = "new" />-->
+                                        <textarea @input="watchTextAreas" :class="{hasError: errors.ingredients_ar}"
+                                                  aria-describedby="ingredients_arHelp" class="form-control text-start"
+                                                  id="ingredients_ar"></textarea>
+                                        <div id="ingredients_arHelp" class="form-text error"></div>
+                                        <p class="form-text error m-0" v-for="e in errors.ingredients_ar">{{ e }}</p>
+                                    </div>
+                                    <div class="col-md-12 mb-3">
+                                        <label class="form-label">دستور پخت عربی</label>
+                                        <textarea @input="watchTextAreas" :class="{hasError: errors.text_ar}"
+                                                  aria-describedby="text_arHelp" class="form-control text-start"
+                                                  id="text_ar"></textarea>
+                                        <div id="text_arHelp" class="form-text error"></div>
+                                        <p class="form-text error m-0" v-for="e in errors.text_ar">{{ e }}</p>
+                                    </div>
+                                </div>
+<!--*****************************************************************************************-->
+                                <div class="row">
                                     <div class="col-md-12 mb-3">
                                         <BtnSubmit @click.prevent="createInfo">
                                             ثبت
                                         </BtnSubmit>
                                     </div>
                                 </div>
-
                             </form>
                         </div>
                     </div>
@@ -261,7 +298,10 @@ export default {
                     ingredients: document.getElementById('ingredients').value,
                     text: document.getElementById('text').value,
                     related_products: selectedProducts,
-// product_id: document.getElementById('product_id').value,
+
+                    title_ar: document.getElementById('title_ar').value,
+                    ingredients_ar: document.getElementById('ingredients_ar').value,
+                    text_ar: document.getElementById('text_ar').value,
 
                 })
                     .then((response) => {

@@ -81,10 +81,6 @@ class UserResource extends JsonResource
             "scope" => $this->scope,
             "orders" => $orders,
             "allOrders" => $allOrders,
-//            "addresses" =>  UserAddressResource::collection($this->addresses),
-            "addresses" =>  $this->addresses,
-
-//            "expires_at" => $exp,
 
             "created_at" => date('Y-m-d', strtotime($this->created_at)),
             "updated_at" => date('Y-m-d', strtotime($this->updated_at)),

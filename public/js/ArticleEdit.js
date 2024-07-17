@@ -1256,14 +1256,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   article_category_id: document.getElementById('category').value,
                   ingredients: document.getElementById('ingredients').value,
                   text: document.getElementById('text').value,
-                  related_products: selectedProducts // product_id: document.getElementById('product_id').value,
-                  // article_tag_id: document.getElementById('article_tag_id').value,
-                  // image2: document.getElementById('Image_product_code').value,
-                  // text2:  document.getElementById('text2').value,
-                  // text3:  document.getElementById('text3').value,
-                  // text4:  document.getElementById('text4').value,
-                  // tags: tags,
-
+                  related_products: selectedProducts,
+                  title_ar: document.getElementById('title_ar').value,
+                  ingredients_ar: document.getElementById('ingredients_ar').value,
+                  text_ar: document.getElementById('text_ar').value
                 }).then(function (response) {
                   console.log(response);
 
@@ -1379,18 +1375,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         this.style.height = "auto";
         this.style.height = this.scrollHeight + "px";
       }
-    },
-    addTag: function addTag() {// this.tags.push('{"uri": "", "label": ""}');
-    },
-    removeTag: function removeTag(index) {// this.tags.splice(index, 1)
-    },
-    updateTags: function updateTags() {// this.tags = [];
-      // for (let i = 0; i < document.getElementsByName('tagLabel').length; i++) {
-      //     this.tags.push({
-      //         "label": document.getElementsByName('tagLabel')[i].value.toString(),
-      //         "uri": document.getElementsByName('tagUri')[i].value.toString()
-      //     });
-      // }
     }
   }
 });
@@ -2290,10 +2274,82 @@ var _hoisted_48 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 );
 
 var _hoisted_49 = {
+  "class": "row"
+};
+var _hoisted_50 = {
+  "class": "col-md-12 col-xl-6 mb-3"
+};
+
+var _hoisted_51 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "title_ar",
+  "class": "form-label"
+}, "عنوان عربی", -1
+/* HOISTED */
+);
+
+var _hoisted_52 = ["value"];
+
+var _hoisted_53 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  id: "title_arHelp",
+  "class": "form-text error"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_54 = {
+  "class": "form-text error m-0"
+};
+var _hoisted_55 = {
+  "class": "row"
+};
+var _hoisted_56 = {
   "class": "col-md-12 mb-3"
 };
 
-var _hoisted_50 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" ویرایش ");
+var _hoisted_57 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "class": "form-label"
+}, "مواد لازم عربی", -1
+/* HOISTED */
+);
+
+var _hoisted_58 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  id: "ingredients_arHelp",
+  "class": "form-text error"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_59 = {
+  "class": "form-text error m-0"
+};
+var _hoisted_60 = {
+  "class": "col-md-12 mb-3"
+};
+
+var _hoisted_61 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "class": "form-label"
+}, "دستور پخت عربی", -1
+/* HOISTED */
+);
+
+var _hoisted_62 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  id: "text_arHelp",
+  "class": "form-text error"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_63 = {
+  "class": "form-text error m-0"
+};
+var _hoisted_64 = {
+  "class": "row"
+};
+var _hoisted_65 = {
+  "class": "col-md-12 mb-3"
+};
+
+var _hoisted_66 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" ویرایش ");
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_image_cropper = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("image-cropper");
@@ -2311,7 +2367,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <div class = \"card\" v-if = \"isDefined\" @click = \"e => enableClick && makeImageArrays()\">"), $data.isDefined ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
         key: 0,
         "class": "card",
-        onClick: _cache[3] || (_cache[3] = function (e) {
+        onClick: _cache[5] || (_cache[5] = function (e) {
           return $data.enableClick;
         })
       }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [_hoisted_8, _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_image_cropper, {
@@ -2402,7 +2458,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         );
       }), 256
       /* UNKEYED_FRAGMENT */
-      ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <div class=\"row\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                  <div class=\"col-md-4 col-xl-4 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <label for=\"category\" class=\"form-label\">دسته بندی محصول</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <select @change=\"showProducts\" class=\"form-select\" id=\"productCategory\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            aria-describedby=\"categoryHelp\" aria-label=\"category\" required>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                      <option value=\"\"></option>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                      &lt;!&ndash;                                            &ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                      <option :selected=\"data.product.category.id == Pcategory.id\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                              v-for=\"Pcategory in productCategories\" :key=\"Pcategory.id\" :value=\"Pcategory.id\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        {{ Pcategory.title }}"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                      </option>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    </select>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <div id=\"productCategoryHelp\" class=\"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                  </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                  <div class=\"col-md-4 col-xl-4 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <label for=\"product_id\" class=\"form-label\">محصول</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <select class=\"form-select\" id=\"product_id\" aria-describedby=\"productHelp\" aria-label=\"product\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            required>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                      &lt;!&ndash;                                          &ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                      <option :selected=\"data.product.id == product.id\" v-for=\"product in products\" :key=\"product.id\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                              :value=\"product.id\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        {{ product.title }}"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                      </option>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    </select>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <div id=\"productHelp\" class=\"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                  </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                  <div class=\"col-md-4 col-xl-4 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <label for=\"article_tag_id\" class=\"form-label\">دستور پخت پیشنهادی</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <select class=\"form-select\" id=\"article_tag_id\" aria-describedby=\"article_tag_idHelp\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            aria-label=\"article_tag_id\" required>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                      &lt;!&ndash;                                          &ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                      <option :selected=\"data.tag.id == article.id\" v-for=\"article in articles\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                              :key=\"article.id\" :value=\"article.id\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                        {{ article.title }}"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                      </option>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    </select>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <div id=\"article_tag_idHelp\" class=\"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                  </div>")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <div class = \"row\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <div class = \"col-12 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <label class = \"form-label\">تصویر محصول</label><br/>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <image-cropper   :isPng=\"isPng\" name = \"product\" caption = \"\" :hasCaption = \"hasCaption\" :isRequired = \"imgRequired\" :src=\"data.image2\"/>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <div id = \"image2Help\" class = \"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <div class = \"row\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <div class = \"col-md-3 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <label for = \"text2\" class = \"form-label\">عنوان محصول</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <input type = \"text\" :class = \"{hasError: errors.text2}\" class = \"form-control\" id = \"text2\" :value = \"data.text2\" aria-describedby = \"text2Help\" required>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <div id = \"text2Help\" class = \"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <p class = \"form-text error m-0\" v-for = \"e in errors.text2\">{{ e }}</p>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <div class = \"col-md-3 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <label for = \"text3\" class = \"form-label\">زیرنویس</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <input type = \"text\" :class = \"{hasError: errors.text3}\" class = \"form-control\" id = \"text3\" :value = \"data.text3\" aria-describedby = \"text3Help\" required>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <div id = \"text3Help\" class = \"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <p class = \"form-text error m-0\" v-for = \"e in errors.text3\">{{ e }}</p>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <div class = \"col-md-3 mb-3\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <label for = \"text4\" class = \"form-label\">با طعم</label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <input type = \"text\" :class = \"{hasError: errors.text4}\" class = \"form-control\" id = \"text4\" :value = \"data.text4\" aria-describedby = \"text4Help\" >"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <div id = \"text4Help\" class = \"form-text error\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <p class = \"form-text error m-0\" v-for = \"e in errors.text4\">{{ e }}</p>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [_hoisted_40, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                       <div id=\"editor\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <editor mode = \"new\" />"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
+      ))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [_hoisted_40, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
         onInput: _cache[0] || (_cache[0] = function () {
           return $options.watchTextAreas && $options.watchTextAreas.apply($options, arguments);
         }),
@@ -2449,11 +2505,61 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         "create-option": true
       }, null, 8
       /* PROPS */
-      , ["modelValue", "options"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_49, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BtnSubmit, {
+      , ["modelValue", "options"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("      ******************************************** زبان عربی ************************************     "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_49, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_50, [_hoisted_51, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+        type: "text",
+        "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
+          hasError: $data.errors.title_ar
+        }, "form-control"]),
+        id: "title_ar",
+        value: $data.data.title_ar,
+        "aria-describedby": "title_arHelp"
+      }, null, 10
+      /* CLASS, PROPS */
+      , _hoisted_52), _hoisted_53, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors.title_ar, function (e) {
+        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_54, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(e), 1
+        /* TEXT */
+        );
+      }), 256
+      /* UNKEYED_FRAGMENT */
+      ))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_55, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_56, [_hoisted_57, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                       <div id=\"editor\"></div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <editor mode = \"new\" />"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
+        onInput: _cache[3] || (_cache[3] = function () {
+          return $options.watchTextAreas && $options.watchTextAreas.apply($options, arguments);
+        }),
+        "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
+          hasError: $data.errors.ingredients_ar
+        }, "form-control text-start"]),
+        "aria-describedby": "ingredients_arHelp",
+        id: "ingredients_ar"
+      }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.data.ingredients_ar), 35
+      /* TEXT, CLASS, HYDRATE_EVENTS */
+      ), _hoisted_58, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors.ingredients_ar, function (e) {
+        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_59, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(e), 1
+        /* TEXT */
+        );
+      }), 256
+      /* UNKEYED_FRAGMENT */
+      ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_60, [_hoisted_61, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
+        onInput: _cache[4] || (_cache[4] = function () {
+          return $options.watchTextAreas && $options.watchTextAreas.apply($options, arguments);
+        }),
+        "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
+          hasError: $data.errors.text_ar
+        }, "form-control text-start"]),
+        "aria-describedby": "text_arHelp",
+        id: "text_ar"
+      }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.data.text_ar), 35
+      /* TEXT, CLASS, HYDRATE_EVENTS */
+      ), _hoisted_62, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors.text_ar, function (e) {
+        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_63, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(e), 1
+        /* TEXT */
+        );
+      }), 256
+      /* UNKEYED_FRAGMENT */
+      ))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("*****************************************************************************************"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_64, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_65, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BtnSubmit, {
         onClick: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)($options.updateInfo, ["prevent"])
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-          return [_hoisted_50];
+          return [_hoisted_66];
         }),
         _: 1
         /* STABLE */
@@ -2616,7 +2722,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\nspan i {\r\n    cursor: pointer;\n}\n.tagElement .uri {\r\n    text-align: left !important;\r\n    font-weight: lighter !important;\n}\r\n\r\n\r\n/*@media (min-width: 1200px) {*/\r\n/*    .modal-xl {*/\r\n/*        max-width: 1140px;*/\r\n/*    }*/\r\n/*}*/\r\n\r\n/*@media (min-width: 992px) {*/\r\n/*    .modal-lg, .modal-xl {*/\r\n/*        max-width: 800px;*/\r\n/*    }*/\r\n/*}*/\r\n\r\n/*@media (min-width: 576px) {*/\r\n/*    .modal-dialog {*/\r\n/*        max-width: 500px;*/\r\n/*        margin: 1.75rem auto;*/\r\n/*    }*/\r\n/*}*/\n.multiselect-tags-search {\r\n    background-color: transparent !important;\n}\n.multiselect-tag {\r\n    background-color: #0d6efd !important;\n}\n.multiselect.is-active {\r\n    box-shadow: none !important;\n}\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\nspan i {\n    cursor: pointer;\n}\n.tagElement .uri {\n    text-align: left !important;\n    font-weight: lighter !important;\n}\n\n\n/*@media (min-width: 1200px) {*/\n/*    .modal-xl {*/\n/*        max-width: 1140px;*/\n/*    }*/\n/*}*/\n\n/*@media (min-width: 992px) {*/\n/*    .modal-lg, .modal-xl {*/\n/*        max-width: 800px;*/\n/*    }*/\n/*}*/\n\n/*@media (min-width: 576px) {*/\n/*    .modal-dialog {*/\n/*        max-width: 500px;*/\n/*        margin: 1.75rem auto;*/\n/*    }*/\n/*}*/\n.multiselect-tags-search {\n    background-color: transparent !important;\n}\n.multiselect-tag {\n    background-color: #0d6efd !important;\n}\n.multiselect.is-active {\n    box-shadow: none !important;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
