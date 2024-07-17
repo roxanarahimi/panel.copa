@@ -18,7 +18,11 @@ class CreateSlidesTable extends Migration
             $table->integer('index');
             $table->string('image')->nullable();
             $table->string('title')->nullable();
+            $table->string('title_en')->nullable();
+            $table->string('title_ar')->nullable();
             $table->string('subTitle')->nullable();
+            $table->string('subTitle_en')->nullable();
+            $table->string('subTitle_ar')->nullable();
             $table->string('link')->nullable();
             $table->boolean('active')->default(0);
             $table->timestamps();

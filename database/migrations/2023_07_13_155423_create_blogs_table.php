@@ -17,7 +17,11 @@ return new class extends Migration
             $table->id();
             $table->integer('blog_category_id');
             $table->string('title');
+            $table->string('title_en')->nullable();
+            $table->string('title_ar')->nullable();
             $table->longText('text')->nullable();
+            $table->longText('text_en')->nullable();
+            $table->longText('text_ar')->nullable();
             $table->string('image')->nullable();
             $table->boolean('active')->default(0);
             $table->longText('tags')->nullable();
