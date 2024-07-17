@@ -48,22 +48,18 @@ import usersTable from "./user/usersTable";
 import adminsTable from "./admin/adminsTable";
 
 import financesTable from "./finance/financesTable";
-import resumesTable from "./employ/resumesTable";
 import blogsTable from "./blog/blogsTable";
 import teasersTable from "./teaser/teasersTable";
 
-// import ordersTable from "./order/ordersTable";
-// import projectsTable from "./project/projectsTable";
-// import coursesTable from "./course/coursesTable";
-// import teachersTable from "./teacher/teachersTable";
-// import foodSlidesTable from "./foodSlide/foodSlidesTable";
+import ordersTable from "./order/ordersTable";
+import foodSlidesTable from "./foodSlide/foodSlidesTable";
 
 export default {
   components: {
     Loader, AllDataContainer, Pagination,
     productsTable, usersTable, articlesTable,
-    adminsTable,  financesTable, resumesTable,blogsTable, teasersTable,
-      // projectsTable, teachersTable, coursesTable, foodSlidesTable,ordersTable
+    adminsTable,  financesTable,blogsTable, teasersTable,ordersTable,
+       foodSlidesTable
   },
   setup() {
     const model = ref();

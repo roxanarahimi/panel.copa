@@ -27,10 +27,10 @@ class User extends Authenticatable
         return $this->hasOne(Order::class, 'user_id', 'id')->where('status','cart');
     }
 
-    public function addresses()
-    {
-        return $this->hasMany(UserAddress::class,   'user_id','id');
-    }
+//    public function addresses()
+//    {
+//        return $this->hasMany(UserAddress::class,   'user_id','id');
+//    }
 //
 //    public function transactions()
 //    {

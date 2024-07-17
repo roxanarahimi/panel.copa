@@ -145,13 +145,13 @@
                     <!--                            <span class="sidebar_title">رزومه ها</span>-->
                     <!--                        </router-link>-->
                     <!--                    </li>-->
-                    <li>
-                        <router-link to="/panel/users" class="nav-link text-white"
-                                     :class="{active: $route.fullPath ==='/panel/users'}">
-                            <i title="کاربران" class="bi bi-people-fill me-2"></i>
-                            <span class="sidebar_title">کاربران</span>
-                        </router-link>
-                    </li>
+<!--                    <li>-->
+<!--                        <router-link to="/panel/users" class="nav-link text-white"-->
+<!--                                     :class="{active: $route.fullPath ==='/panel/users'}">-->
+<!--                            <i title="کاربران" class="bi bi-people-fill me-2"></i>-->
+<!--                            <span class="sidebar_title">کاربران</span>-->
+<!--                        </router-link>-->
+<!--                    </li>-->
                     <!--                    <li>-->
                     <!--                        <router-link to="/panel/finance" class="nav-link text-white"-->
                     <!--                                     :class="{active: $route.fullPath ==='/panel/finance'}">-->

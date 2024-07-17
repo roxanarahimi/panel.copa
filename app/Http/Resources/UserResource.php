@@ -56,7 +56,6 @@ class UserResource extends JsonResource
                 "payment" => $this->cart->payment,
                 "status" => $this->cart->status,
                 "items" => $this->cart->items,
-                "user_address_id" => $this->user_address_id,
                 "created_at" => $this->cart->created_at,
                 "updated_at" => $this->cart->created_at,
             ];
