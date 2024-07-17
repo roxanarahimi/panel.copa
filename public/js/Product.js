@@ -582,18 +582,64 @@ var _hoisted_44 = /*#__PURE__*/_withScopeId(function () {
 });
 
 var _hoisted_45 = {
-  key: 1
+  "class": "row mt-3"
+};
+var _hoisted_46 = {
+  "class": "col-xxl-12 mb-5"
+};
+var _hoisted_47 = {
+  "class": "card h-100"
+};
+var _hoisted_48 = {
+  "class": "card-body p-md-5"
 };
 
-var _hoisted_46 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-    "class": "fw-bold"
-  }, "این محصول موجود نیست", -1
+var _hoisted_49 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", null, "عنوان عربی", -1
   /* HOISTED */
   );
 });
 
-var _hoisted_47 = [_hoisted_46];
+var _hoisted_50 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", {
+    "class": "mt-3"
+  }, "با طعم عربی", -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_51 = {
+  style: {
+    "font-size": "18px",
+    "white-space": "pre-line !important",
+    "text-align": "right !important"
+  }
+};
+
+var _hoisted_52 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", {
+    "class": "mt-3"
+  }, "متن عربی", -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_53 = {
+  style: {
+    "font-size": "18px",
+    "white-space": "pre-line",
+    "text-align": "right !important"
+  }
+};
+
+var _hoisted_54 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+    "class": "fw-bold"
+  }, "این محصول موجود نیست")], -1
+  /* HOISTED */
+  );
+});
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
@@ -664,7 +710,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         );
       }), 128
       /* KEYED_FRAGMENT */
-      ))])])])])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_45, _hoisted_47))])];
+      ))])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_45, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_46, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_47, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_48, [_hoisted_49, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.title_ar), 1
+      /* TEXT */
+      ), _hoisted_50, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_51, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.flavor_at), 1
+      /* TEXT */
+      ), _hoisted_52, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_53, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.text_ar), 1
+      /* TEXT */
+      )])])])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), _hoisted_54];
     }),
     _: 1
     /* STABLE */

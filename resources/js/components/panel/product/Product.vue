@@ -103,10 +103,29 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div v-else><p class="fw-bold">این محصول موجود نیست</p></div>
 
+                <div class="row mt-3">
+                    <div class="col-xxl-12 mb-5 ">
+                        <div class="card h-100">
+                            <div class="card-body p-md-5">
+                                <h4>عنوان عربی</h4>
+                                <p>{{ data.title_ar }}</p>
+                                <h4 class="mt-3">با طعم عربی</h4>
+                                <p style="font-size: 18px;white-space: pre-line !important; text-align: right !important" >
+                                    {{ data.flavor_at }}
+                                </p>
+                                <h4 class="mt-3">متن عربی</h4>
+                                <p style="font-size: 18px;white-space: pre-line; text-align: right !important">
+                                    {{ data.text_ar }}
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+        <div v-else><p class="fw-bold">این محصول موجود نیست</p></div>
 
     </transition>
 
