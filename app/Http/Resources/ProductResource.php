@@ -53,7 +53,7 @@ class ProductResource extends JsonResource
                 'title_en' => $this->category->title_en,
                 'title_ar' => $this->category->title_ar,
                 'active' => $this->category->active,
-                "subCategories" => $this->subCategories,
+                "subCategories" => $this->category->subCategories,
             ],
             "related_products" => $relatedProducts,
             "color" => $this->color,
