@@ -19,6 +19,6 @@ class ProductCategory extends Model
     }
     public function subCategories()
     {
-        return $this->hasMany(ProductCategory::class,   'id','parent_id')->orderByDesc('id');
+        return $this->hasMany(ProductCategory::class,   'parent_id','id')->orderBy('title');
     }
 }
