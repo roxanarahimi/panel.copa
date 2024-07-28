@@ -24,6 +24,7 @@ class ProductCategoryResource extends JsonResource
             "title_ar" => $this->title_ar,
             "image" => $this->image,
             "thumb" => $thumb,
+            "subCategories" => $this->subCategories,
             "active" => (boolean)$this->active,
             "products" => ProductResource::collection($this->products),
             "subsets" => ProductResource::collection($this->products),
