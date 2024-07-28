@@ -17,6 +17,7 @@ class ArticleCategoryResource extends JsonResource
         $thumb = $this->image ? str_replace('.png','_thumb.png', $this->image) : '';
         return [
             "id" => (string)$this->id,
+            'parent_id' => $this->parent_id,
             'title' => $this->title,
             'title_en' => $this->title_en,
             'title_ar' => $this->title_ar,
