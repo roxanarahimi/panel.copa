@@ -41,9 +41,25 @@
                                 <div class="col-xl-1 py-2">
                                     <label :for="'title_'+data.id">عنوان</label>
                                 </div>
-                                <div class="col-xl-6 col-xxl-7 mb-2">
+                                <div class="col-xl-6 col-xxl-3 mb-2">
                                     <input type="text" class="form-control border-0 col-auto" required
                                            :id="'title_'+data.id" :value="data.title">
+                                </div>
+                                <div class="col-xl-1 py-2">
+                                    <label :for="'parent_id'+data.id">والد</label>
+                                </div>
+                                <div  class="col-xl-6 col-xxl-3 mb-2">
+                                        <select  class="form-select" :id="'parent_id'+data.id"
+                                                aria-describedby="parent_idHelp"
+                                                aria-label="parent_id" >
+                                            <option value="0" :selected="data.parent_id == 0">هیچ</option>
+                                            <option :selected="data.parent_id == category.id"
+                                                    v-for="category in categories" :key="category.id"
+                                                    :value="category.id">
+                                                {{ category.title }}
+                                            </option>
+                                        </select>
+
                                 </div>
                                 <div class="col-xl-4  ">
                                     <button type="submit" class="btn btn-dark ms-auto mb-2"
@@ -91,7 +107,7 @@ import imageCropper from "../components/ImageCropper";
 import {onMounted, ref} from "vue";
 
 export default {
-    props: ['model', 'allData', 'page', 'pages', 'load'],
+    props: ['model', 'allData', 'page', 'pages', 'load','categories'],
     name: "categoriesTable",
     components: { imageCropper},
     setup(props) {
@@ -153,6 +169,8 @@ export default {
             await axios.post('/api/panel/category/' + props.model + '/' + id,
                 {
                     title: document.getElementById('title_' + id).value,
+                    parent_id: document.getElementById('parent_id'+ id).value,
+
                     // image: document.getElementById('Image_'+id+'_code').value,
 
                 })

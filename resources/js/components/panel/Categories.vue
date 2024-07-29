@@ -18,7 +18,7 @@
                 <!--                <template #default>-->
                 <div class="col-xl-6 mb-3">
                     <loader style="margin-top: -72px"/>
-                    <categories-table class="mb-3" :model="model" :allData="allData" :page="page" :pages="pages"
+                    <categories-table class="mb-3" :categories="categories"  :model="model" :allData="allData" :page="page" :pages="pages"
                                       :load="loadData"/>
                     <pagination :page="page" :pages="pages" :total="total" :labels="labels" :load="loadData"/>
 
@@ -30,13 +30,26 @@
                             <p class="fw-bold">ثبت دسته جدید</p>
                             <form>
                                 <div class="row">
-                                    <div class="col-12 mb-3">
+                                    <div class="col-6 mb-3">
                                         <label for="title" class="form-label">عنوان</label>
                                         <input type="text" class="form-control" id="title" required="required">
                                         <div>
                                             <small v-for="error in errors.title"
                                                    class="form-text error py-0 my-0 d-block">{{ error }}</small>
                                         </div>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label for="title" class="form-label">دسته والد</label>
+                                        <select class="form-select" id="parent_id" aria-describedby="parent_idHelp"
+                                                aria-label="parent_id" required>
+                                            <option value="0">هیچ</option>
+                                            <option v-for="category in categories" :key="category.id"
+                                                    :value="category.id">
+                                                {{ category.title }}
+                                            </option>
+                                        </select>
+                                        <div id="parent_idHelp" class="form-text error"></div>
+
                                     </div>
                                 </div>
                                 <btn-submit @click.prevent="createInfo">
@@ -104,6 +117,7 @@ export default {
         const hasCaption = false;
         const aspect = false;
         const isPng = true;
+        const categories = ref([]);
 
         const loadData = async (p) => {
             if (p === undefined) {
@@ -129,6 +143,7 @@ export default {
             await axios.post('/api/panel/category/' + model.value,
                 {
                     title: document.getElementById('title').value,
+                    parent_id: document.getElementById('parent_id').value,
                     // image: document.getElementById('Image__code').value,
 
                 })
@@ -174,6 +189,12 @@ export default {
 
                 })
         };
+        const loadCategories= ()=> {
+            axios.get('/api/panel/category/product?page=1&perPage=100000')
+                .then((response) => {
+                    categories.value = response.data.data;
+                }).catch();
+        };
         const deleteInfo = async () => {
             await axios.post('/api/panel/delete/category/'+model.value, {
                 id: document.getElementById('deleteId').value,
@@ -200,11 +221,13 @@ export default {
 
         };
         onMounted(() => {
+            loadCategories();
             loadData();
         })
         return {
             model, errors, allData, page, pages, total, labels,
-            loadData, createInfo, activeToggle, deleteInfo, imgRequired, hasCaption, aspect, isPng
+            loadData, createInfo, activeToggle, deleteInfo, imgRequired, hasCaption, aspect, isPng,
+            categories, loadCategories,
         }
     },
 
