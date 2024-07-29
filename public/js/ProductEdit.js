@@ -558,7 +558,7 @@ var _hoisted_37 = {
   "class": "form-text error m-0"
 };
 var _hoisted_38 = {
-  "class": "col-md-4 col-lg-3 mb-3"
+  "class": "col-md-4 col-lg-4 mb-3"
 };
 
 var _hoisted_39 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
@@ -581,7 +581,7 @@ var _hoisted_42 = {
   "class": "form-text error m-0"
 };
 var _hoisted_43 = {
-  "class": "col-md-4 col-lg-3 mb-3"
+  "class": "col-md-4 col-lg-4 mb-3"
 };
 
 var _hoisted_44 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
@@ -604,7 +604,7 @@ var _hoisted_47 = {
   "class": "form-text error m-0"
 };
 var _hoisted_48 = {
-  "class": "col-md-4 col-lg-3 mb-3"
+  "class": "col-md-4 col-lg-4 mb-3"
 };
 
 var _hoisted_49 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {

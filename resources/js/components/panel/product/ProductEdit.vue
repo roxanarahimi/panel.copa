@@ -67,7 +67,7 @@
 <!--                                        <p class="form-text error m-0" v-for="e in errors.subTitle">{{ e }}</p>-->
 
 <!--                                    </div>-->
-                                    <div class="col-md-4 col-lg-3 mb-3">
+                                    <div class="col-md-4 col-lg-4 mb-3">
                                         <label for="flavor" class="form-label">باطعم</label>
                                         <input @input="updateData" type="text" :class="{hasError: errors.flavor}"
                                                :value="data.flavor" class=" form-control text-start" id="flavor">
@@ -75,7 +75,7 @@
                                         <p class="form-text error m-0" v-for="e in errors.flavor">{{ e }}</p>
 
                                     </div>
-                                    <div class="col-md-4 col-lg-3 mb-3">
+                                    <div class="col-md-4 col-lg-4 mb-3">
                                         <label for="flavor_en" class="form-label">باطعم انگلیسی</label>
                                         <input @input="updateData" type="text" :class="{hasError: errors.flavor_en}"
                                                :value="data.flavor_en" class="en form-control text-start" id="flavor_en">
@@ -83,7 +83,7 @@
                                         <p class="form-text error m-0" v-for="e in errors.flavor_en">{{ e }}</p>
 
                                     </div>
-                                    <div class="col-md-4 col-lg-3 mb-3">
+                                    <div class="col-md-4 col-lg-4 mb-3">
                                         <label for="category" class="form-label">دسته</label>
                                         <select @change="updateData" class="form-select" id="category"
                                                 aria-describedby="categoryHelp"
