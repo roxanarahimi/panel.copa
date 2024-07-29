@@ -43,7 +43,7 @@
                                         <select class="form-select" id="parent_id" aria-describedby="parent_idHelp"
                                                 aria-label="parent_id" required>
                                             <option value="0">هیچ</option>
-                                            <option v-for="category in categories" :key="category.id"
+                                            <option v-show="category.parent_id == 0" v-for="category in categories" :key="category.id"
                                                     :value="category.id">
                                                 {{ category.title }}
                                             </option>

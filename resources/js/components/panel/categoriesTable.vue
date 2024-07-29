@@ -53,7 +53,7 @@
                                                 aria-describedby="parent_idHelp"
                                                 aria-label="parent_id" >
                                             <option value="0" :selected="data.parent_id == 0">هیچ</option>
-                                            <option :selected="data.parent_id == category.id"
+                                            <option v-show="(!(category.id == data.id.toString())&& category.parent_id == 0)" :selected="data.parent_id == category.id"
                                                     v-for="category in categories" :key="category.id"
                                                     :value="category.id">
                                                 {{ category.title }}
